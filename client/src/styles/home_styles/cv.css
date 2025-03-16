@@ -1,0 +1,135 @@
+/* Centered Section */
+.cv-section {
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+
+  background: #ffffff;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  z-index: 11;
+
+}
+
+.container-cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.container-cv h2 span {
+  transition: all 0.5s ease-in-out;
+}
+
+.container-cv h2:hover span {
+  transition: all 0.5s ease-in-out;
+  background-image: linear-gradient(90deg, #32cb74, #09ad66);
+  background-clip: text;
+  color: transparent;
+  font-size: 6rem;
+}
+
+.svg-cv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+/* Heading */
+.cv-section h2 {
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Paragraph */
+.cv-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Button Container */
+.cv-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cv-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.cv-btn .cv-icon {
+  font-size: 1.2rem;
+}
+
+/* Download Button */
+.download-btn {
+  background: #00d679;
+  color: white;
+  transition: background 1s ease-in-out, transform 0.5s;
+}
+
+.download-btn:hover {
+  background: linear-gradient(45deg, #00d679, #00a8cc);
+  transform: scale(1.05);
+  transition: background 1s ease-in-out, transform 0.5s;
+}
+
+/* View Online Button */
+.view-btn {
+  background: #ddd;
+  color: #222;
+  transition: background 1s ease-in-out, transform 0.5s;
+}
+
+.view-btn:hover {
+  background: linear-gradient(45deg, #ddd, #777777);
+  transform: scale(1.05);
+  transition: background 1s ease-in-out, transform 0.5s;
+}
+
+
+.curvy-line2 {
+  fill: none;
+  stroke: #ff6e6e;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 2400;
+  /* Total length of the path */
+  stroke-dashoffset: 2400;
+  /* Start hidden */
+}
+
+.move_left2 {
+  animation: drawLine2 5s ease-in-out forwards;
+}
+
+@keyframes drawLine2 {
+  from {
+    stroke-dashoffset: 2400;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

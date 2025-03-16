@@ -1,0 +1,156 @@
+.animationWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    border: 0;
+}
+
+.boid-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgb(239, 239, 239);
+}
+
+
+.click {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(max(40vw, 40vh));
+    width: calc(max(40vw, 40vh));
+    border-radius: 50%;
+    background-color: rgb(239, 239, 239);
+    animation: scaleIn 1s forwards;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+.click_to_start {
+    font-size: 5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 10;
+    transition: transform 0.5s;
+    text-align: center;
+    margin: 20px;
+    
+}
+
+.click:hover .click_to_start {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+
+.circle_explode {
+    will-change: transform;
+    transform: translateZ(0) scale(0);
+    ;
+    background-color: rgb(23, 0, 61);
+    position: absolute;
+    opacity: 1;
+    width: calc(max(150vw, 150vh));
+    height: calc(max(150vw, 150vh));
+    border-radius: 50%;
+}
+
+
+.music-text {
+    font-size: 1.2vw;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    font-weight: 250;
+}
+
+.click:hover .music-text {
+    opacity: 1;
+}
+
+.no-sound {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+.no-sound-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: visible;
+    width: 200px;
+}
+
+.no-sound:hover .dropdown {
+    opacity: 1;
+    transform: translateX(-150px);
+}
+
+.dropdown p {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    transition: color 0.5s;
+}
+
+.circle_explode_animation {
+    animation: boom 1.45s forwards;
+}
+
+@keyframes boom {
+    0% {
+        opacity: 1;
+        transform: scale(0)
+    }
+
+    33% {
+        opacity: 1;
+        transform: scale(0.3)
+    }
+
+    66% {
+        opacity: 1;
+        transform: scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}

@@ -1,0 +1,235 @@
+.section-experience {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    z-index: 20;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.stickySection {
+    position: relative;
+    height: 500vh; /*edit*/
+    background-color: rgb(255, 255, 255);
+    z-index: 22;
+}
+
+.sticked-item {
+    position: sticky;
+    top: 0;
+}
+
+.title-experience {
+    text-align: left;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    font-size: 4rem;
+    color: #000000;
+    width: 85%;
+    border-top: 2px solid #000000;
+    margin-top: 75px;
+}
+
+.education-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.sticked-item h2 {
+    font-size: 4rem;
+    color: #ff5e5e;
+    text-align: left;
+    margin-bottom: 10px;
+    
+}
+
+.education-duration {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.text-wrapper-education {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    width: 85%;
+}
+
+.education-uni-details {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    width: 70%;
+    color: #000000;
+    text-align: left;
+    transition: opacity 0.5s;
+
+}
+
+.uniImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 75px;
+    width: 100%;
+    transition: opacity 0.5s;
+}
+
+.edu-uni-img {
+    width: 47.5%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border: 2px solid #000000;
+}
+
+
+
+.education-degree {
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 0;
+    transition: opacity 0.5s;
+
+}
+
+.honors {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ffa621;
+}
+
+
+.my-kcl-experience {
+    border-top: 4px solid #ff5e5e;
+    border-bottom: 4px solid #ff5e5e;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    width: 80%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 15%;
+    margin-top: 100px;
+}
+
+
+
+.sticky-section-modules-absolute {
+    position: absolute;
+    width: 100%;
+    top: 300vh;
+    height: 200vh;
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+}
+
+.sticky-section-modules-relative {
+    position: relative;
+    top: 0;
+    height: 400vh;
+}
+
+
+.sticky-section-modules-sticked {
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    height: 100vh;
+    border-top: 2px solid #000000;
+}
+
+.sticky-section-modules-sticked h2 {
+    font-size: 4rem;
+    color: #000000;
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    padding-top: 70px;
+}
+
+.module-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+}
+
+.module-title {
+    position: relative;
+    margin-left: 1%;
+    
+    width: 38.75%;
+    height: 99.5%;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: background 0.25s ease-in-out;
+}
+
+.module-title-explanation {
+    margin-right: 1%;
+    width: 58.75%;
+    height: 99.5%;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: background 0.25s ease-in-out;
+
+}
+
+.module-title-explanation-inner p{
+    font-size: 4rem;
+}
+
+.module-title-explanation-inner{
+    padding-left: 10%;
+    padding-right: 5%;
+    
+}
+.module-list {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    padding: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+
+.module-title-key-color{
+    padding-right: 5%;
+    text-align: right;
+}
+
+.level-4-key{
+    color: #FFC300;
+}
+
+.level-5-key{
+    color: #FF5733;
+}
+
+.level-6-key{
+    color: #C70039;
+}
+
+.level-7-key{
+    color: #900C3F;
+}
+
+.module-item {
+    font-size: 3rem;
+    color: #000000;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}

@@ -1,0 +1,71 @@
+.links-wrapper {
+  position: relative;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 7px;
+  z-index: 2;
+}
+
+.copied-confirm-links {
+  position: absolute;
+  width: 500px;
+  color: rgb(0, 0, 0);
+  left: 0%;
+  bottom: 0%;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  z-index: -1;
+  font-family: "Lexend", sans-serif;
+
+}
+
+.iconwrap-links {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  transition: background-color 0.5s;
+}
+
+.iconwrap-links:hover {
+  background-color: rgb(255, 219, 153);
+}
+
+.iconwrap-links img {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+}
+
+.line-links {
+  background-color: rgb(0, 0, 0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}

@@ -1,0 +1,175 @@
+/* Main Section */
+
+.about-me-section {
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 100vw;
+  height: 100vh;  
+  z-index: 5;
+  overflow: hidden;
+
+}
+
+/* Content Container */
+.about-me-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  line-height: 1; /* Better readability */
+  color: #111; /* Slightly darker text for contrast */
+  text-align: left;
+  z-index: 2;
+    
+  background-color: rgba(255, 255, 255, 0.538);
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+/* Paragraph Styling */
+.about-me-content p {
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+
+/* Header with Profile */
+.about-me-header {
+  width: min-content;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  gap: 20px;
+
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 9vw;
+  width: auto;
+  font-weight: 500;  
+}
+
+
+.meet{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  transform: none;
+}
+
+.about-me-header::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transition: transform 0.75s ease-out;
+}
+
+.about-me-header:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-me-section {
+    padding: 50px 20px;
+  }
+
+  .about-me-content p {
+    font-size: 1rem;
+  }
+
+  .about-me-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.highlight {
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: background-size 2.5s ease-out;
+}
+
+.orange{
+  background-image: linear-gradient(to right, #ffcc84 100%, transparent 100%);
+}
+
+.grey{
+  background-image: linear-gradient(to right, #52e78672 100%, transparent 100%);
+}
+
+.blue{
+  background-image: linear-gradient(to right, #81d5ff 100%, transparent 100%);
+}
+
+.pink{
+  background-image: linear-gradient(to right, #cea0ff 100%, transparent 100%);
+}
+
+.highlighted {
+  background-size: 100% 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile:hover{
+  
+  transform: scale(1.1) rotate(5deg);
+  transition: transform 0.5s;
+}
+
+.profile img {
+  
+  width: 9rem; 
+  max-width: 100%; 
+  object-fit: cover;
+  border-radius: 50px; 
+}
+
+@media (max-width: 1200px) {
+  .profile img {
+    width: 100%; 
+    max-width: 100%; 
+    object-fit: cover;
+    border-radius: 40px; 
+  }
+  .about-me-content p {
+    padding: 0px 20px;
+    font-size: 1rem;
+  }
+  
+}
+
+.move_left3{
+  animation: drawLine3 2s ease-in-out forwards 1s;
+}
+@keyframes drawLine3 {
+  from {
+      stroke-dashoffset: 2400;
+  }
+  to {
+      stroke-dashoffset: 0;
+  }
+}

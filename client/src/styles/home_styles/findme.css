@@ -1,0 +1,66 @@
+.findme-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.findme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 7px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgb(122, 122, 122);
+  border-radius: 50px;
+}
+
+.copied-confirm {
+  position: absolute;
+  width: 500px;
+  color: white;
+  left: 0%;
+  bottom: 0%;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  z-index: 1;
+  font-family: "Lexend", sans-serif;
+}
+
+.iconwrap {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  border: 1px solid rgb(122, 122, 122);
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.iconwrap img {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+}
+
+.line {
+  background-color: rgb(255, 255, 255);
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}

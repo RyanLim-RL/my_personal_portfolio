@@ -1,0 +1,266 @@
+.footer-container{
+    position: relative;
+    width: 100vw;
+    min-height: auto;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+    
+}
+
+.footer-pong{
+    position: relative;
+    margin-top: 2.5rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+    background-color: rgb(156, 156, 255);
+    border-radius: 50px;
+}
+
+.footer-pong canvas{
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.score-footer{
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: 80rem;
+    color: rgb(234, 234, 234);
+    width: 100%;
+    font-family: serif;
+}
+
+.footer-pong-start-button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    border: 5px solid #ffffff;
+    padding: 30px;
+    margin: 0;
+    z-index: 200;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: serif;
+}
+
+.container-text-foot{
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #e95353;
+    margin-top: 2.5rem; 
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.footer-bottom{
+    margin: 1.5rem 0rem 3rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.footer-left{
+    margin-left: 2.5rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.footer-right{
+    margin-right: 2.5rem;
+    margin-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    
+}
+
+.left-foot-text{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    font-family: sans-serif;
+}
+
+.footer-page{
+    margin: 0;
+    align-items: start;
+}
+
+.footer-page-container{
+    
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    gap: 40px;
+    text-align: right;
+    
+}
+
+.footer-page p{
+    font-size: 2rem;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: right;
+    color: black;
+}
+
+.email-footer{
+    font-size: 1.25rem;
+    margin-top: 10px;
+    text-align: right;
+    color: black;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.email-footer span{ 
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.copied-footer{
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateX(100%);
+    margin-top: 20px;
+}
+
+.footer-page-left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+}
+
+.footer-page-right{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+
+.footer-page-left div, .footer-page-right div{
+    cursor: pointer;
+}
+
+.footer-social p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+    color: black;
+
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;    
+    gap: 20px;
+}
+
+.social-icons-link{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    align-items: center;
+
+}
+
+.social-icons-right{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.social-icons-left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.social-icons img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 5px;
+}
+
+.social-icon-name-foot{
+    display: inline;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.footer-credits{
+    margin-top: 2.5rem;
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    
+}
+
+.footer-credits span{
+    font-weight: bold;
+    font-size: 9rem;
+}
+
+.icon-name-foot{
+    display: inline;
+}
+
+.name-bottom{
+    margin-top: 11px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 90%;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+
+.name-bottom-left{
+    text-align: left;    
+}
+.name-bottom-mid{
+    text-align: center;
+}
+.name-bottom-right{
+    text-align: right;
+}

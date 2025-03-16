@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./client
+    container_name: react-frontend
+    ports:
+      - "80:80"
+    env_file:
+      - ./client/.env      
+    restart: always
+  backend:
+    build: ./api
+    container_name: express-backend
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./api/.env
+    restart: always

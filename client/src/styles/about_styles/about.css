@@ -1,0 +1,202 @@
+.about-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+}
+
+.frame {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    overflow-y: auto;
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    margin: 0px;
+    background: linear-gradient(0deg, #c579ff, #d7ffff);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out, border-top-left-radius 0.5s ease-in-out, border-top-right-radius 0.5s ease-in-out;
+}
+
+.section-about {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex: 1 0 auto;
+    padding: 0;
+}
+
+.title-about {
+    font-family: sans-serif;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100vh);
+    text-align: center;
+    font-size: 10rem;
+    letter-spacing: 2px;
+    color: rgb(21, 21, 21);
+    transition: transform 2s ease-in-out;
+    width: 100vw;
+}
+
+.title-about-from-country {
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+    font-size: 8rem;
+    letter-spacing: 2px;
+    width: 100vw;
+    z-index: 10;
+    color: rgb(51, 185, 141);
+}
+
+.about-from-country {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+    z-index: 10;
+    text-align: center;
+    color: rgb(51, 185, 141);
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.title-about-to-country {
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+    text-align: center;
+    font-size: 7.5rem;
+    letter-spacing: 2px;
+    width: 100vw;
+    z-index: 10;
+    color: rgb(16, 29, 80);
+    line-height: 6rem;
+}
+
+.title-about-to-country span {
+    font-size: 4rem;
+}
+
+.title-about-to-uni {
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -5%);
+    text-align: center;
+    font-size: 8rem;
+    width: 100vw;
+    z-index: 10;
+    color: rgb(255, 72, 72);
+}
+
+.title-about-to-uni span {
+    font-size: 4rem;
+    color: rgb(249, 121, 89);
+}
+
+.title-about-to-globe {
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+    text-align: center;
+    font-size: 6rem;
+    letter-spacing: 2px;
+    width: 100vw;
+    z-index: 10;
+    color: rgb(26, 26, 26);
+}
+
+.title-about-to-globe span {
+    font-size: 10rem;
+    background-image: linear-gradient(90deg, rgb(255, 0, 0), rgb(5, 167, 255));
+    background-clip: text;
+    color: transparent;
+}
+
+.title-about-to-home{
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+    text-align: center;
+    font-size: 6rem;
+    letter-spacing: 2px;
+    width: 100vw;
+    z-index: 10;
+    color: rgb(27, 27, 27);
+    
+    
+}
+
+.title-about-to-home span {
+    font-size: 10rem;
+    color: whitesmoke;
+}
+
+.side-text {
+    position: absolute;
+    top: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 0.9rem;
+    width: auto;
+    color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    animation: slide 10s infinite linear
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+
+.side-text.left {
+    left: -0.5%;
+
+}
+
+.side-text.left p {
+    transform: rotate(-90deg);
+}
+
+.side-text.right {
+    right: -0.5%;
+}
+
+.side-text.right p {
+    transform: rotate(90deg);
+}
+
+
+
+
+
+
+

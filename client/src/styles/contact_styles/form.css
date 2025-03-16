@@ -1,0 +1,125 @@
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 0px 20px;
+    border-radius: 50px;
+
+
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    height: 25vh;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.title-container h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.title-container h1:hover {
+    animation: breath 3s infinite;
+}
+
+@keyframes breath {
+    0% {
+
+        letter-spacing: 0px;
+    }
+
+    50% {
+
+        letter-spacing: -1.5px;
+    }
+
+    100% {
+
+        letter-spacing: 0px;
+    }
+}
+
+.title-container p {
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: black;
+    line-height: 0;
+}
+
+form {
+    width: 100%;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 98.5%;
+    padding: 12px;
+    padding-right: 0;
+    margin: 8px 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.65);
+    color: black;
+    transition: background 0.25s, border-color 0.25s;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+    border-color: rgba(7, 7, 7, 0.8);
+    background: rgba(7, 7, 7, 0.8);
+}
+
+
+.contact-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: "Roboto Slab", arial, helvetica, sans-serif;
+    font-weight: bold;
+    transition: transform 1s;
+}
+
+.contact-card button:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+    color: black;
+    font-size: 14px;
+    font-style: italic;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-card input:focus::placeholder,
+.contact-card textarea:focus::placeholder {
+    color: white;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+    color: white;
+}

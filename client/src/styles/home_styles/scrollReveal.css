@@ -1,0 +1,14 @@
+.contain{
+    position:relative;
+    height: 450vh;
+  }
+  
+  /* Green box - Absolute */
+  .rel {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    top: 0;
+  }
+  
