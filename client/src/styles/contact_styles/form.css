@@ -58,7 +58,8 @@
     font-size: 1.2rem;
     font-weight: 300;
     color: black;
-    line-height: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 form {
@@ -122,4 +123,25 @@ form {
 .contact-card input:focus,
 .contact-card textarea:focus {
     color: white;
+}
+
+
+@media (max-width: 430px) {
+    .title-container h1 {
+        font-size: 2.5rem;
+    }
+    .title-container p{
+        font-size: 1rem;
+        line-height: auto;
+    }
+}
+
+@media (min-width:431px) and (max-width: 700px) {
+    .title-container h1 {
+        font-size: 4rem;
+    }
+    .title-container p{
+        font-size: 1rem;
+        line-height: auto;
+    }
 }

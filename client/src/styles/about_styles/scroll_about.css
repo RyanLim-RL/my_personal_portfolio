@@ -16,6 +16,7 @@
 .sticked-item {
     position: sticky;
     top: 0;
+    height: 100vh;
 }
 
 .title-experience {
@@ -232,4 +233,59 @@
     color: #000000;
     opacity: 1;
     transition: all 0.5s ease-out;
+}
+
+@media (max-width:430px){
+    .title-experience {
+        font-size: 3rem;
+    }
+    
+    .sticked-item h2 {
+        font-size: 2rem;
+    }
+    
+    .education-duration {
+        font-size: 0.8rem;
+        text-align: right;
+    }
+    
+    .education-uni-details {
+        font-size: 1.25rem;
+        width: 90%;
+    }
+    .uniImg{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .edu-uni-img{
+        width: 75%;
+    }
+    .education-degree {
+        font-size: 1.25rem;
+    }
+    
+    .honors {
+        font-size: 1rem;
+    }
+    
+    .my-kcl-experience {
+        font-size: 1rem;
+    }
+    
+    .sticky-section-modules-sticked h2 {
+        font-size: 2rem;
+    }
+
+    .module-title-key-color{
+        font-size: 0.8rem;
+    }
+
+    .module-title-explanation-inner p{
+        font-size: 1rem;
+    }
+    
+    .module-item {
+        font-size: 1.5rem;
+    }
+
 }

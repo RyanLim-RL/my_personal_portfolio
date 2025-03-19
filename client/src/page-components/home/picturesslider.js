@@ -18,34 +18,38 @@ const PictureSlider = () => {
             const relativeBase = homeWrapper.scrollTop / window.innerHeight;
             
             if (relativeBase > 1 && relativeBase < 2) {
-                left.style.transform = `translateY(${(relativeBase) * 100}px)`;
-                right.style.transform = `translateY(${(relativeBase) * 100}px)`;
-                leftDiv.style.transform = `translateX(0px)`;
-                rightDiv.style.transform = `translateX(0px)`;
+                left.style.transform = `translateY(${(relativeBase-1) * 100}px)`;
+                right.style.transform = `translateY(${(relativeBase-1) * 100}px)`;
+                leftDiv.style.transform = `translateX(1px)`;
+                rightDiv.style.transform = `translateX(-1px)`;
                 text.style.transform = `translateY(0%)`;
 
             }
             else if (relativeBase > 2 && relativeBase < 2.4) {
-                leftDiv.style.transform = `translateX(0px)`;
-                rightDiv.style.transform = `translateX(0px)`;
+                leftDiv.style.transform = `translateX(1px)`;
+                rightDiv.style.transform = `translateX(-1px)`;
+                left.style.transform = `translateY(100px)`;
+                right.style.transform = `translateY(100px)`;
                 leftDiv.style.borderRadius = "0px";
                 rightDiv.style.borderRadius = "0px";
                 text.style.transform = `translateY(${(relativeBase - 2) * 300}%)`;
 
             } else if (relativeBase > 2.4 && relativeBase < 2.5) {
-                rightDiv.style.transform = `translateX(0px)`;
-                leftDiv.style.transform = `translateX(0px)`;
+                rightDiv.style.transform = `translateX(1px)`;
+                leftDiv.style.transform = `translateX(-1px)`;
                 text.style.transform = "translateY(150%)";
+                left.style.transform = `translateY(100px)`;
+                right.style.transform = `translateY(100px)`;
                 leftDiv.style.borderRadius = "0px";
                 rightDiv.style.borderRadius = "0px";
 
 
             }
             else if (relativeBase > 2.5) {
-                left.style.transform = `translateY(200px)`;
-                right.style.transform = `translateY(200px)`;
-                leftDiv.style.transform = `translateX(-${(relativeBase - 2.5) * 500}px)`;
-                rightDiv.style.transform = `translateX(${(relativeBase - 2.5) * 500}px)`;
+                left.style.transform = `translateY(100px)`;
+                right.style.transform = `translateY(100px)`;
+                leftDiv.style.transform = `translateX(-${(relativeBase - 2.5) * 100}%)`;
+                rightDiv.style.transform = `translateX(${(relativeBase - 2.5) * 100}%)`;
                 leftDiv.style.borderRadius = `${(relativeBase - 2.5) * 500}px`;
                 rightDiv.style.borderRadius = `${(relativeBase - 2.5) * 500}px`;
                 text.style.transform = "translateY(150%)";

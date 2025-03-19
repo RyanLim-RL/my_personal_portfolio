@@ -59,10 +59,10 @@
 
 
 .click_to_start {
-    font-size: 5rem;
+    font-size: calc(min(7vw,7vh));
     color: rgb(255, 255, 255);
     width: 100%;
-    
+    width: 200%;
     font-weight: 10;
     transition: transform 0.5s;
     text-align: center;
@@ -170,51 +170,23 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .music-text{
         font-size: 0.8rem;
       }
-      .click_to_start{
-          font-size: 2.5rem;
+  }
+  
+  
+  
+  @media (min-width: 768px) and (max-width: 1366px) {
+    .music-text{
+        font-size: 1rem;
       }
   }
   
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .music-text{
-        font-size: 1rem;
-      }
-      .click_to_start{
-          font-size: 3rem;
-      }
-  }
-  
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .music-text{
-        font-size: 1rem;
-      }
-      .click_to_start{
-          font-size: 3rem;
-      }
-  }
-  
-  
-  @media (min-width: 1025px) and (max-width: 1366px) {
-    .music-text{
-      font-size: 1.2rem;
-    }
-    .click_to_start{
-        font-size: 3.6rem;
-    }
-  }
-  
-  
   @media (min-width: 1367px) {
     .music-text{
         font-size: 1.5rem;
-      }
-      .click_to_start{
-          font-size: 5rem;
       }
   }

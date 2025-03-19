@@ -27,17 +27,19 @@
     height: 130%;
     object-fit: cover;
     object-position: bottom;
+    margin-top: -200px;
 }
 
 
 .onePicture .text{
-    width: 100%;
+    width: 80%;
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -25%);
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 9vw;
     background-image: linear-gradient(180deg, #9d0000, #ca005be6);
     background-clip: text;
@@ -50,12 +52,14 @@
     font-weight: 1000;
 }
 
-@media (max-width: 1366px){
-    .text_3{
-        top: 5%;
+@media ((min-width: 431px) and (max-width: 600px)){
+    .onePicture .text{
+        font-size: 5rem;
     }
-    .segment img{
-        width: 200%;
-        height: 200%;
+}
+
+@media (max-width: 430px){
+    .onePicture .text{
+        font-size: 3rem;
     }
 }

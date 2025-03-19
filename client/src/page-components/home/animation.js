@@ -126,6 +126,11 @@ const Animation = () => {
 
     }, [dimensions]);
 
+    useEffect(() => {
+        const nav = document.querySelector(".navbar");
+        nav.style.pointerEvents = "none";
+    }, []);
+
 
     return (
         <div className="animation_wrapper">

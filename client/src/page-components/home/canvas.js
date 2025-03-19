@@ -30,6 +30,10 @@ const NBodyCanvas = () => {
         return () => window.removeEventListener("mousemove", getMousePos);
     }, []);
 
+    useEffect(() => {
+        console.log(dimensions);
+    },[]);
+
 
     useEffect(() => {
         const homeWrapper = document.querySelector(".home-wrapper");

@@ -13,6 +13,16 @@ const Projects = () => {
     const [projectFocused, setProjectFocused] = useState([0, 0]);
     const navigate = useNavigate();
     const lastFocusedIndex = useRef(null);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768); // Adjust breakpoint as needed
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 867);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     useEffect(() => {
         let timeoutIDProjects
@@ -106,7 +116,7 @@ const Projects = () => {
         const projectHeader = document.querySelector('.projects-header');
         const techProjPage = document.querySelector('.tech-proj-page');
         const desProjPage = document.querySelector('.description-proj-page');
-        if (!switching){
+        if (!switching) {
             playClick(playMusic);
         }
         if (projectFocused[1] === 4) {
@@ -190,7 +200,7 @@ const Projects = () => {
         specificProject.style.backgroundColor = 'rgb(255, 255, 255)';
     }, [projectFocused]);
 
-   
+
 
 
     return (
@@ -199,9 +209,21 @@ const Projects = () => {
             <div className='projects-container-relative'>
                 <div className="projects-header-stiky">
                     <div className='projects-header'>
-                        <div className='tech-proj-page'>{projects[projectFocused[1]].tech}</div>
-                        <div className='title-proj-page'>{projects[projectFocused[1]].name}</div>
-                        <div className='description-proj-page'>{projects[projectFocused[1]].description}</div>
+                        {isSmallScreen ? (
+                            <>
+                                <div className="title-proj-page">{projects[projectFocused[1]].name}</div>
+                                <div className="wrapper-proj-header">
+                                    <div className="tech-proj-page">{projects[projectFocused[1]].tech}</div>
+                                    <div className="description-proj-page">{projects[projectFocused[1]].description}</div>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div className="tech-proj-page">{projects[projectFocused[1]].tech}</div>
+                                <div className="title-proj-page">{projects[projectFocused[1]].name}</div>
+                                <div className="description-proj-page">{projects[projectFocused[1]].description}</div>
+                            </>
+                        )}
                     </div>
                     <div className="projects-container">
                         {projects.map((proj, index) => (

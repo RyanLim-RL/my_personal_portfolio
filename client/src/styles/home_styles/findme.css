@@ -87,4 +87,13 @@
     min-width: 20px;
     min-height: 20px;
   }
+  .copied-confirm{
+    left:60%;
+  }
+}
+
+@media ((min-width: 411px) and (max-width: 600px)) {
+  .copied-confirm{
+    left:60%;
+  }
 }

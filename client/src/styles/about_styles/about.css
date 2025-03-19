@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     z-index: 1;
+    overflow-x: hidden;
     transition: width 0.5s ease-in-out, height 0.5s ease-in-out, border-top-left-radius 0.5s ease-in-out, border-top-right-radius 0.5s ease-in-out;
 }
 
@@ -60,18 +61,11 @@
     width: 100vw;
     z-index: 10;
     color: rgb(51, 185, 141);
+    line-height: 5rem;
 }
 
-.about-from-country {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -30%);
-    z-index: 10;
-    text-align: center;
-    color: rgb(51, 185, 141);
+.title-about-from-country span {
     font-size: 2.5rem;
-    font-family: 'Playfair Display', serif;
 }
 
 .title-about-to-country {
@@ -86,7 +80,7 @@
     width: 100vw;
     z-index: 10;
     color: rgb(16, 29, 80);
-    line-height: 6rem;
+    
 }
 
 .title-about-to-country span {
@@ -104,6 +98,8 @@
     width: 100vw;
     z-index: 10;
     color: rgb(255, 72, 72);
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .title-about-to-uni span {
@@ -193,6 +189,140 @@
 .side-text.right p {
     transform: rotate(90deg);
 }
+
+@media (max-width:499px){
+    .title-about{
+        top:10%;
+        font-size: 10vw;
+    }
+    .title-about-from-country{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .title-about-from-country span{
+        font-size: 1.5rem;
+    }
+    .title-about-to-country{
+        font-size: 3rem;
+    }
+    .title-about-to-country span{
+        font-size: 2rem;
+    }
+    
+    .title-about-to-uni{
+        font-size: 3rem;
+    }
+    .title-about-to-uni span{
+        font-size: 2rem;
+    }
+    .title-about-to-globe{
+        font-size: 3rem;
+    }
+    .title-about-to-globe span{
+        font-size: 3.5rem;
+        display: block;
+    }
+    .title-about-to-home{
+        font-size: 1.75rem;
+    }
+    .title-about-to-home span{
+        font-size: 3rem;
+    }
+    .side-text{
+        display: none;
+    }
+}
+
+
+@media ((min-width:500px) and (max-width: 900px)){
+    .title-about{
+        
+        font-size: 10vw;
+    }
+    .title-about-from-country{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .title-about-from-country span{
+        font-size: 1.5rem;
+        line-height: 0;
+    }
+    .title-about-to-country{
+        font-size: 4rem;
+    }
+    .title-about-to-country span{
+        font-size: 3rem;
+    }
+    
+    .title-about-to-uni{
+        font-size: 4rem;
+    }
+    .title-about-to-uni span{
+        font-size: 3rem;
+    }
+    .title-about-to-globe{
+        font-size: 3rem;
+    }
+    .title-about-to-globe span{
+        font-size: 4.5rem;
+    }
+    .title-about-to-home{
+        font-size: 2rem;
+    }
+    .title-about-to-home span{
+        font-size: 4rem;
+    }
+    .side-text{
+        display: none;
+    }
+}
+
+@media ((min-width:901px) and (max-width: 1322px)){
+    .title-about{
+        font-size: 10vw;
+    }
+    .title-about-from-country{
+        font-size: 6rem;
+        line-height: 4rem;
+    }
+    .title-about-from-country span{
+        font-size: 2.5rem;
+        line-height: 0;
+    }
+    .title-about-to-country{
+        font-size: 6rem;
+    }
+    .title-about-to-country span{
+        font-size: 3rem;
+    }
+    
+    .title-about-to-uni{
+        font-size: 5rem;
+    }
+    .title-about-to-uni span{
+        font-size: 3rem;
+    }
+    .title-about-to-globe{
+        font-size: 3rem;
+    }
+    .title-about-to-globe span{
+        font-size: 6.5rem;
+    }
+    .title-about-to-home{
+        font-size: 3rem;
+    }
+    .title-about-to-home span{
+        font-size: 8rem;
+    }
+    .side-text{
+        display: none;
+    }
+}
+
+
+
+
+
 
 
 

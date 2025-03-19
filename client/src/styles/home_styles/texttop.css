@@ -7,7 +7,7 @@
   justify-content: center;
   background: white;
   width: 100vw;
-  height: 100vh;  
+  height: 100vh;
   z-index: 5;
   overflow: hidden;
 
@@ -17,20 +17,22 @@
 .about-me-content {
   display: flex;
   flex-direction: column;
-  height: 100vh;  
+  height: 100vh;
   margin: auto;
   text-align: center;
   align-items: center;
   align-content: center;
   justify-content: center;
-  line-height: 1; /* Better readability */
-  color: #111; /* Slightly darker text for contrast */
+  line-height: 1;
+  /* Better readability */
+  color: #111;
+  /* Slightly darker text for contrast */
   text-align: left;
   z-index: 2;
-    
+
   font-family: serif;
   background-color: rgba(255, 255, 255, 0.538);
-  padding-top: 10vh;
+  padding-top: 5vh;
   padding-left: 20vw;
   padding-right: 20vw;
 }
@@ -57,11 +59,11 @@
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-size: 9vw;
   width: auto;
-  font-weight: 500;  
+  font-weight: 500;
 }
 
 
-.meet{
+.meet {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,19 +96,19 @@
   transition: background-size 2.5s ease-out;
 }
 
-.orange{
+.orange {
   background-image: linear-gradient(to right, #ffcc84 100%, transparent 100%);
 }
 
-.grey{
+.grey {
   background-image: linear-gradient(to right, #52e78672 100%, transparent 100%);
 }
 
-.blue{
+.blue {
   background-image: linear-gradient(to right, #81d5ff 100%, transparent 100%);
 }
 
-.pink{
+.pink {
   background-image: linear-gradient(to right, #cea0ff 100%, transparent 100%);
 }
 
@@ -121,39 +123,57 @@
   cursor: pointer;
 }
 
-.profile:hover{
-  
+.profile:hover {
+
   transform: scale(1.1) rotate(5deg);
   transition: transform 0.5s;
 }
 
 .profile img {
-  
-  width: 9rem; 
-  max-width: 100%; 
+
+  width: 9rem;
+  max-width: 100%;
   object-fit: cover;
-  border-radius: 50px; 
+  border-radius: 50px;
 }
 
-.move_left3{
+.move_left3 {
   animation: drawLine3 2s ease-in-out forwards 1s;
 }
+
 @keyframes drawLine3 {
   from {
-      stroke-dashoffset: 2400;
+    stroke-dashoffset: 2400;
   }
+
   to {
-      stroke-dashoffset: 0;
+    stroke-dashoffset: 0;
   }
 }
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 430px) {
+  .about-me-header {
+    font-size: 12vw;
+  }
   .about-me-content p {
     font-size: 1rem;
   }
-  .profile{
+
+  .profile {
+    display: none;
+  }
+}
+
+@media ((min-width: 431px) and (max-width: 800px)) {
+  .about-me-header {
+    font-size: 10vw;
+  }
+  .about-me-content p {
+    font-size: 1.2rem;
+  }
+
+  .profile {
     display: none;
   }
 }

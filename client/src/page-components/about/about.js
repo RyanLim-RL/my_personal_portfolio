@@ -123,8 +123,10 @@ const About = () => {
           <h1 className="title-about">-ABOUT RYAN-</h1>
         </div>
         <div className="section-about">
-          <h1 className="title-about-from-country">Made in Malaysia</h1>
-          <p className="about-from-country">Specifically Kuala Lumpur</p>
+          <h1 className="title-about-from-country">Made in Malaysia
+            <br/> <span>Specifically Kuala Lumpur</span>
+          </h1>
+          
         </div>
         <div className="section-about">
           <h1 className="title-about-to-country">
@@ -138,7 +140,7 @@ const About = () => {
         </div>
         <div className="section-about">
           <h1 className="title-about-to-globe">
-            Operational <br></br> <span>WORLDWIDE</span>
+            Operational <br></br> <span>WORLD</span><span>WIDE</span>
           </h1>
         </div>
         <ScrollAbout setBottomUni={setBottomUni} />

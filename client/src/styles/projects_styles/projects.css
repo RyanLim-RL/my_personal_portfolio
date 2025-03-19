@@ -42,7 +42,7 @@
     text-align: center;
 }
 
-.title-proj-page{
+.title-on-proj-page{
     display: flex;
     font-family: serif;
     font-size: 6rem;
@@ -52,6 +52,7 @@
     justify-content: center;
     height: 30%;
     align-items: end;
+    border:none;
 }
 
 .description-proj-page{
@@ -110,4 +111,102 @@
     height: auto;
     object-fit: cover;
     mix-blend-mode: multiply;
+}
+
+.wrapper-proj-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+@media (max-width: 430px) {
+    .title-proj-page{
+        font-size: 3rem;
+    }
+    .description-proj-page{
+        font-size: 1rem;
+    }
+    .tech-proj-page{
+        font-size: 0.9rem;
+    }
+    .proj-item-page{
+        font-size: 6rem;
+    }
+    .projects-container{
+        height: 50vh;
+    }
+    .projects-header{
+        padding-top: 40px;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tech-proj-page{
+        width:50%;
+        
+    }
+}
+
+@media (min-width: 431px) and (max-width: 867px) {
+    .title-proj-page{
+        font-size: 3.8rem;
+    }
+    .description-proj-page{
+        font-size: 1rem;
+    }
+    .tech-proj-page{
+        font-size: 1rem;
+    }
+    .proj-item-page{
+        font-size: 6rem;
+    }
+    .projects-container{
+        height: 50vh;
+    }
+    .projects-header{
+        padding-top: 40px;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tech-proj-page{
+        width:50%;
+        
+    }
+}
+
+@media (min-width: 868px) and (max-width: 1200px) {
+    .title-proj-page{
+        font-size: 5rem;
+    }
+    .description-proj-page{
+        font-size: 1rem;
+    }
+    .tech-proj-page{
+        font-size: 1rem;
+    }
+    .proj-item-page{
+        font-size: 6rem;
+    }
+    .projects-container{
+        height: 50vh;
+    }
+    .projects-header{
+        padding-top: 40px;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tech-proj-page{
+        width:50%;
+        
+    }
 }

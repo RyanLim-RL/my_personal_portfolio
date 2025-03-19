@@ -8,7 +8,8 @@ const FindMe = () => {
             .then(() => {
                 const confirm = document.getElementsByClassName("copied-confirm")[0];
                 confirm.style.opacity = 1;
-                confirm.style.transform = "translateX(77.5%)";
+                if(window.innerWidth < 600) confirm.style.transform = "translateY(-100%)";
+                else confirm.style.transform = "translateX(75.5%)";
                 setTimeout(() => {
                     confirm.style.opacity = 0;
                     confirm.style.transform = "translateX(0%)";

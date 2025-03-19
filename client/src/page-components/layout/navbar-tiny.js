@@ -46,11 +46,6 @@ const NavBarTiny = () => {
                     lines: "line-colored-black",
                     boxes: "box-colored-black",
                 },
-                red: {
-                    backgrounds: "background_white",
-                    lines: "line-colored-red",
-                    boxes: "box-colored-purple",
-                },
                 orange: {
                     backgrounds: "background_white",
                     lines: "line-colored-orange",
@@ -65,11 +60,6 @@ const NavBarTiny = () => {
                     backgrounds: "background_transparent",
                     lines: "line-colored-white",
                     boxes: "box-colored-white",
-                },
-                blackAbout: {
-                    backgrounds: "background_black",
-                    lines: "line-colored-black-light",
-                    boxes: "box-colored-black-light",
                 },
             };
             const applyStyle = () => {
@@ -106,6 +96,9 @@ const NavBarTiny = () => {
         setSwitching(true);
         setTimeout(() => {
             setMenuOpen(false);
+            document.querySelector(".line1-nav").style.transform = "none";
+            document.querySelector(".line2-nav").style.transform = "none";
+            document.querySelector(".line3-nav").style.transform = "none";
             navigate(path_in);
         }, 1500);
     };

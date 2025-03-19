@@ -133,3 +133,22 @@
     stroke-dashoffset: 0;
   }
 }
+
+@media (max-width: 600px){
+  .cv-section h2 {
+    font-size: 3rem;
+  }
+  
+  /* Paragraph */
+  .cv-section p {
+    font-size: 0.9rem;
+  }
+  .container-cv h2:hover span {
+    font-size: 3.5rem;
+  }
+
+  .cv-btn {
+
+    font-size: 7vw;    
+  }
+}
