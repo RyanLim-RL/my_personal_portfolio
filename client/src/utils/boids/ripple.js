@@ -37,7 +37,7 @@ class Ripples {
     }
 
     add(x,y){
-        if(Math.random() >0.005) return;
+        if(Math.random() >0.0005) return;
         this.ripples.push(new Ripple(x + perlin(x, y) * 20, y));
     }
 

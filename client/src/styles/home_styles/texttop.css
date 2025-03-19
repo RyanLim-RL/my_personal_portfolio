@@ -28,16 +28,18 @@
   text-align: left;
   z-index: 2;
     
+  font-family: serif;
   background-color: rgba(255, 255, 255, 0.538);
-  padding-top: 100px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-top: 10vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 /* Paragraph Styling */
 .about-me-content p {
   font-size: 2vw;
   font-weight: 300;
+  font-family: sans-serif;
 }
 
 
@@ -84,21 +86,6 @@
   transform-origin: bottom center;
 }
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-me-section {
-    padding: 50px 20px;
-  }
-
-  .about-me-content p {
-    font-size: 1rem;
-  }
-
-  .about-me-header h1 {
-    font-size: 1.5rem;
-  }
-}
 
 .highlight {
   background-size: 0% 100%;
@@ -148,20 +135,6 @@
   border-radius: 50px; 
 }
 
-@media (max-width: 1200px) {
-  .profile img {
-    width: 100%; 
-    max-width: 100%; 
-    object-fit: cover;
-    border-radius: 40px; 
-  }
-  .about-me-content p {
-    padding: 0px 20px;
-    font-size: 1rem;
-  }
-  
-}
-
 .move_left3{
   animation: drawLine3 2s ease-in-out forwards 1s;
 }
@@ -171,5 +144,16 @@
   }
   to {
       stroke-dashoffset: 0;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-me-content p {
+    font-size: 1rem;
+  }
+  .profile{
+    display: none;
   }
 }

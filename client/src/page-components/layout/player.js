@@ -98,7 +98,7 @@ const Player = ({ style }) => {
           ? process.env.PUBLIC_URL + "/music/piano_white.svg"
           : process.env.PUBLIC_URL + "/music/piano_black.svg"
       );
-    } else if (style === "lightBlue") {
+    } else if (style === "orange") {
       setImageSrc(
         isPlaying
           ? process.env.PUBLIC_URL + "/music/piano_black.svg"

@@ -8,7 +8,7 @@
     overflow: hidden;
     background: rgba(0, 0, 0, 0);
     transition: background 0.5s linear;
-    z-index: -2;
+    z-index: 3000;
 }   
 
 .playerButton{
@@ -17,6 +17,7 @@
     cursor: pointer;
     height: 100%;
     width: 100%;
+    z-index: 3002;
     background: rgba(0, 0, 0, 0);
 }
 
@@ -37,6 +38,12 @@
     width:100%;
     height:100%;
     border-radius: 50px;
-    z-index:-1;
+    z-index: 3001;
     transition: background 0.4s ease-in-out;
+}
+
+.menu-item{
+    font-size: 3rem;
+    color: white;
+    font-family: serif;
 }

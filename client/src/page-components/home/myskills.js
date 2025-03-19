@@ -134,6 +134,8 @@ const MySkills = () => {
 
 
   useEffect(() => {
+    const homeWrapper = document.querySelector(".home-wrapper");
+    if (!homeWrapper) return;
     const onScroll = () => {
       if (!skillsRef.current) return;
 
@@ -148,12 +150,12 @@ const MySkills = () => {
       curve.style.transform = `scale3d(1,${above_0},1)`
 
       const curvebottom = document.getElementsByClassName("curve-bottom")[0]
-      curvebottom.style.transform = `scale3d(1,${dist},1)`
+      curvebottom.style.transform = `scale3d(1.1,${dist},1)`
 
     };
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    homeWrapper.addEventListener("scroll", onScroll);
+    return () => homeWrapper.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -188,7 +190,7 @@ const MySkills = () => {
       </ul>
       <div className="curve-bottom">
         <svg viewBox="0 0 1440 320">
-          <path fill="rgb(234, 234, 234)" d="M 0 320 Q 720 100  1440 320"></path>
+          <path fill="rgb(255, 255, 255)" d="M 0 320 Q 720 100  1440 320"></path>
         </svg>
       </div>
     </div>

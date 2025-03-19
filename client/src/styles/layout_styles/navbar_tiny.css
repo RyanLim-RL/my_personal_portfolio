@@ -1,0 +1,119 @@
+.navbar-tiny {
+    display: flex;
+    position: relative;
+    transform: translateY(-100%);
+}
+
+.play-logo-tiny {
+    display: flex;
+    border-radius: 50px;
+    height: 48px;
+    width: 58px;
+    border: 1px solid #ffffff;
+    margin-left: 20px;
+    margin-top: 5px;
+    z-index: 2000;
+
+}
+
+
+.hamburger {
+    cursor: pointer;
+    height: 48px;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transition: 0.4s cubic-bezier(0, 0, 0, 1);
+    width: 48px;
+    outline: white;
+    z-index: 2001;
+}
+
+.hamburger-animation {
+    position: relative;
+}
+
+.line1-nav {
+    background: white;
+    height: 3px;
+    left: 8px;
+    position: absolute;
+    width: 32px;
+    top: 13px;
+    transition: 0.4s cubic-bezier(0, 0, 0, 1);
+    transform: none;
+}
+
+.line2-nav {
+    background: white;
+    height: 3px;
+    left: 8px;
+    position: absolute;
+    width: 32px;
+    top: 23px;
+    transition: 0.4s cubic-bezier(0, 0, 0, 1);
+    transform: none;
+}
+
+.line3-nav {
+    background: white;
+    height: 3px;
+    left: 8px;
+    position: absolute;
+    width: 32px;
+    top: 33px;
+    transition: 0.4s cubic-bezier(0, 0, 0, 1);
+    transform: none;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(32, 32, 48);
+    position: fixed !important;
+    width: 100vw;
+    height: 100vh;
+    row-gap: 40px;
+    column-gap: 40px;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    animation: open 0.4s ease-in-out;
+    transform-origin: top right;
+}
+
+.menu-item {
+    transition: color 0.2s linear;
+}
+
+.home-nav-tiny:hover {
+    color: rgb(118, 63, 206);
+}
+
+.about-nav-tiny:hover {
+    color: rgb(247, 178, 59);
+}
+
+.contact-nav-tiny:hover {
+    color: rgb(157, 157, 240);
+}
+
+.proj-nav-tiny:hover {
+    color: rgb(186, 186, 186);
+}
+
+
+@keyframes open {
+    from {
+        transform: scale(0);
+        border-radius: 400px;
+    }
+
+    to {
+        transform: scale(1);
+        border-radius: 0px;
+    }
+}

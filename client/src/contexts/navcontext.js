@@ -12,7 +12,8 @@ export const NavProvider = ({ children }) => {
   const [switching, setSwitching] = useState(false)
   const [path, setPath] = useState("");
   const [footer, setFooter] = useState(false);
-  const [aboutNavStyle, setAboutNavStyle] = useState("lightBlue");
+  const [pastPoint, setPastPoint] = useState(false);
+
 
   useEffect(() => {
     setPath(location.pathname);
@@ -28,7 +29,7 @@ export const NavProvider = ({ children }) => {
       switching, setSwitching,
       path, setPath,
       footer, setFooter,
-      aboutNavStyle, setAboutNavStyle
+      pastPoint, setPastPoint
     }}>
       {children}
     </NavContext.Provider>

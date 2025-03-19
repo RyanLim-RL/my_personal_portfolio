@@ -3,6 +3,9 @@ import '../../styles/home_styles/one_picture.css';
 
 const OnePicture = () => {
     useEffect(() => {
+        const homeWrapper = document.querySelector('.home-wrapper');
+        if (!homeWrapper) return;
+
         const scrollHandler = () => {
             const onePicture = document.getElementsByClassName('onePicture')[0];
             if (!onePicture) return;
@@ -11,8 +14,8 @@ const OnePicture = () => {
             const gradImage = document.getElementsByClassName('gradImage')[0];
             gradImage.style.transform = `translateY(${ratio * 100}px)`;
         };
-        window.addEventListener('scroll', scrollHandler);
-        return () => window.removeEventListener('scroll', scrollHandler);
+        homeWrapper.addEventListener('scroll', scrollHandler);
+        return () => homeWrapper.removeEventListener('scroll', scrollHandler);
     }, []);
 
 

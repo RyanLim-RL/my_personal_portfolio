@@ -1,317 +1,66 @@
 .navbar{
     position: fixed;
-    align-items: center;
-    display: flex;
-    
     height: 80px;
     width: 100%;
-    top : 0;
-    z-index: 1000;
-    transform: translateY(-100%);
-    transition: transform 1s;
-    background-color: transparent;
+    top: 0;
+    z-index: 2000 !important;
+    pointer-events: none;
+}
+
+.background_white {
+    background: white;
+    transition: background 0.4s ease-in-out;
+    border: 1px solid black !important;
+  }
+  
+  .background_transparent {
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.4s ease-in-out;
+    border: 1px solid rgb(122, 122, 122);
+  }
+  
+  .background_black {
+    background: rgb(27, 27, 27);
+    transition: background 0.4s ease-in-out;
+    border: none;
+  }
+  
+  
+  
+  .box-colored-purple {
+    background: rgb(81, 46, 139);
+  }
+  
+  .box-colored-white {
+    background: rgb(255, 255, 255);
+  }
+  
+  .box-colored-black {
+    background: rgb(27, 27, 27);
+  }
+  
+  .box-colored-orange {
+    background: rgb(253, 200, 94);
+  }
+  
+  .box-colored-black-light {
+    background: rgb(52, 52, 52);
+  }
+  
+  
+  
+  .text-black {
+    color: black;
+  }
+  
+  .text-white {
+    color: white;
   }
 
-  .leftNav{
-    position: absolute;
-    left: 2vw; 
-    top: 50%; 
-    transform: translateY(-50%); 
-  
-    border-radius: 50px;
-    width: 100px;
-    height: 42px;
-    padding: 0;
-    margin: 0;
-    
-    display: flex;
-    align-items: center;
-    overflow:hidden;
-    z-index: -1;
-}
+  .line-colored-black{
+    background: black !important;
+  }
 
-.box{
-  position: absolute;
-  bottom:-100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  z-index: -1;
-  justify-content: center;
-  align-items:center;
-  display: flex;
-  transition: background 0.4s ease-in-out;
-}
-
-.text_box{
-  position:relative;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -100%); 
-  width:100%;
-  height:50%;
-  overflow:hidden;
-  padding: 0;
-  margin: 0;
-}
-
-.old_t{
-  width:100%;
-  height:100%;
-  top:0;
-  position: absolute;
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  padding: 0;
-  margin: 0;
-  z-index: 2;
-  font-weight: bold;
-}
-
-
-.new_t{
-  width:100%;
-  height:100%;
-  top:100%;
-  position: absolute;
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  padding: 0;
-  margin: 0;
-  z-index: 5;
-  font-weight: bold;
-}
-
-
-.leftNav:hover .old_t{
-  transform: translateY(-100%);
-  transition: transform 0.4s ease-out
-}
-
-.leftNav:not(:hover) .old_t{
-  transition: transform 0.4s ease-out
-}
-
-.leftNav:hover .new_t{
-  transform: translateY(-100%);
-  transition: transform 0.4s ease-out
-}
-
-.leftNav:not(:hover) .new_t{
-  transition: transform 0.4s ease-out
-}
-
-.leftNav:hover .box{
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-out
-}
-
-.leftNav:not(:hover) .box{
-  transition: transform 0.3s ease-out
-}
-
-.midNav {
-  position: absolute;
-  left: 50%; 
-  top: 50%;   
-  height: 42px;
-  width: 300px;
-  transform: translate(-50%, -50%); 
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  border-radius: 50px;
-  gap: 20px; 
-  z-index:-1;
-  overflow: hidden;
-}
-
-.midNav .proj, .midNav .about, .midNav .contact{
-  position:relative;
-  z-index:20;
-  width:100%;
-  height: 100%;
-  gap: 20px; 
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow: hidden;
-}
-
-.l_old{
-  position: absolute;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  height: 100%;
-  z-index:10;
-}
-
-.l_left{
-  position: absolute;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  height: 100%;
-  left: -100%;
-  z-index:10;
-}
-
-.l_right{
-  position: absolute;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  height: 100%;
-  left: 100%;
-  z-index:10;
-}
-
-.l_down{
-  position: absolute;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  height: 100%;
-  bottom: -100%;
-  z-index:10;
-}
-
-.l_old_text{
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  height: 100%;
-  font-weight: bold;
-}
-
-.l_right_text{
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  font-weight: bold;
-  height: 100%;
-}
-
-.l_left_text{
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  height: 100%;
-  font-weight: bold;
-}
-
-.l_down_text{
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  width: 100%;
-  font-weight: bold;
-  height: 100%;
-}
-/* background movement */
-
-.c_left{
-  position: absolute;
-  left:-100%;
-  top:0;
-  width:100%;
-  height:100%;
-  border-radius: 50px;
-  z-index:2;
-  transition: background 0.4s ease-in-out;
-}
-
-.c_right{
-  position: absolute;
-  left:100%;
-  top:0;
-  width:100%;
-  height:100%;
-  border-radius: 50px;
-  z-index:2;
-  transition: background 0.4s ease-in-out;
-}
-
-.c_down{
-  position: absolute;
-  left:0;
-  top:100%;
-  width:100%;
-  height:100%;
-  border-radius: 50px;
-  z-index:2;
-  transition: background 0.4s ease-in-out;
-}
-
-
-.rightNav {
-  position: absolute;
-  right: 2vw; 
-  top: 50%; 
-  transform: translateY(-50%); 
-  display: flex;
-  border-radius: 50px;
-  height: 42px;
-  width: 70px;
-  gap: 10px; 
-  align-content: center;
-  justify-content: center;
-}
-
-
-.background_white{
-  background: white;
-  transition: background 0.4s ease-in-out;
-  border: 1px solid black;
-}
-
-.background_transparent{
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.4s ease-in-out;
-  border: 1px solid rgb(122, 122, 122);
-}
-
-.background_black{
-  background: rgb(27, 27, 27);
-  transition: background 0.4s ease-in-out;
-  border: none;
-}
-
-
-
-.box-colored-purple{
-  background: rgba(115, 105, 226, 1);
-}
-
-.box-colored-white{
-  background: rgb(255, 255, 255);
-}
-
-.box-colored-black{
-  background: rgb(27, 27, 27);
-}
-
-.box-colored-lightblue{
-  background: rgb(222, 254, 255);
-}
-
-.box-colored-black-light{
-  background: rgb(52, 52, 52);
-}
-
-
-
-.text-black{
-  color: black;
-}
-
-.text-white{
-  color: white;
-}
+  .line-colored-white{
+    background: white;
+  }

@@ -17,7 +17,7 @@
     width: 90vw;
     height: 80vh;
     margin: 0px;
-    background: linear-gradient(0deg, #c579ff, #d7ffff);
+    background: linear-gradient(0deg, #c579ff, #f7b23b);
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -35,7 +35,7 @@
 }
 
 .title-about {
-    font-family: sans-serif;
+    font-family: serif;
     position: absolute;
     top: 0;
     left: 50%;
@@ -43,13 +43,13 @@
     text-align: center;
     font-size: 10rem;
     letter-spacing: 2px;
-    color: rgb(21, 21, 21);
+    color: rgb(247, 247, 247);
     transition: transform 2s ease-in-out;
     width: 100vw;
 }
 
 .title-about-from-country {
-    font-family: sans-serif;
+    font-family: serif;
     position: absolute;
     left: 50%;
     top: 10%;
@@ -71,11 +71,11 @@
     text-align: center;
     color: rgb(51, 185, 141);
     font-size: 2.5rem;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .title-about-to-country {
-    font-family: sans-serif;
+    font-family: serif;
     position: absolute;
     left: 50%;
     top: 5%;
@@ -94,7 +94,7 @@
 }
 
 .title-about-to-uni {
-    font-family: sans-serif;
+    font-family: serif;
     position: absolute;
     left: 50%;
     top: 5%;
@@ -112,7 +112,7 @@
 }
 
 .title-about-to-globe {
-    font-family: sans-serif;
+    font-family: serif;
     position: absolute;
     left: 50%;
     top: 25%;
@@ -133,7 +133,7 @@
 }
 
 .title-about-to-home{
-    font-family: sans-serif;
+    font-family: serif;
     position: absolute;
     left: 50%;
     top: 90%;

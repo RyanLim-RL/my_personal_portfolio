@@ -1,32 +1,25 @@
 .home {
     position: relative;
-    background-color: rgb(165, 165, 165);
-    background: black;
     width: 100vw;
     z-index: 0;
     overflow-x: hidden;
     overflow: visible
   }
   
-
-  
   .main_page {
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: black;
     z-index: 0;
     overflow: visible
   }
-  
-  .hidden{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-50%);
-  }
-  
-  .show {
-    transition: all 2s;
-  }
-  
-  
+
+
+  .home-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling inside */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth;
+}

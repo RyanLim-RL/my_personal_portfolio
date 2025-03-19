@@ -14,9 +14,10 @@ const WorkTogether = () => {
                     stroke="red" fill="none" strokeWidth="5" />
             </svg>
             <div className='footer_text'>
-                <h1>Let's work together</h1>
+                <h1>Let's work
+                    <br />
+                    <span>TOGETHER</span></h1>
             </div>
-
         </div>
     );
 }

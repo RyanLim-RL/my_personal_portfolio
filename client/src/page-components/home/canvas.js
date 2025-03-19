@@ -32,6 +32,9 @@ const NBodyCanvas = () => {
 
 
     useEffect(() => {
+        const homeWrapper = document.querySelector(".home-wrapper");
+        if (!homeWrapper) return;
+
         const scrollHandler = () => {
             const sectionTop = document.querySelector(".section-top");
             if (!sectionTop) return;
@@ -43,8 +46,8 @@ const NBodyCanvas = () => {
             section_wrapper.style.borderRadius = `${Math.min(ratio * 1000, 50)}px`;
 
         };
-        window.addEventListener("scroll", scrollHandler);
-        return () => window.removeEventListener("scroll", scrollHandler);
+        homeWrapper.addEventListener("scroll", scrollHandler);
+        return () => homeWrapper.removeEventListener("scroll", scrollHandler);
     }, []);
 
     useEffect(() => {

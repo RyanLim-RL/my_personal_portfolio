@@ -3,6 +3,8 @@ import React, { useEffect } from "react";
 
 const PictureSlider = () => {
     useEffect(() => {
+        const homeWrapper = document.querySelector(".home-wrapper");
+        if (!homeWrapper) return;
         const scrollHandler = () => {
             const twoPictures = document.getElementsByClassName("two_pictures")[0];
             const left = document.getElementsByClassName("left_img")[0];
@@ -13,7 +15,8 @@ const PictureSlider = () => {
 
 
             if (!twoPictures || !left || !right || !text) return;
-            const relativeBase = window.scrollY / window.innerHeight;
+            const relativeBase = homeWrapper.scrollTop / window.innerHeight;
+            
             if (relativeBase > 1 && relativeBase < 2) {
                 left.style.transform = `translateY(${(relativeBase) * 100}px)`;
                 right.style.transform = `translateY(${(relativeBase) * 100}px)`;
@@ -48,8 +51,8 @@ const PictureSlider = () => {
                 text.style.transform = "translateY(150%)";
             }
         }
-        window.addEventListener("scroll", scrollHandler);
-        return () => window.removeEventListener("scroll", scrollHandler);
+        homeWrapper.addEventListener("scroll", scrollHandler);
+        return () => homeWrapper.removeEventListener("scroll", scrollHandler);
     }, []);
     return (
         <div className="pictures">

@@ -14,7 +14,7 @@ import { useLocation } from 'react-router-dom';
 
 
 function Home() {
-  const { setNonHome, animationDone, setSwitching, switching, path, setFooter } = useNav();
+  const { setNonHome, animationDone, setSwitching, switching, path, setFooter, setPastPoint } = useNav();
   const location = useLocation();
 
   useEffect(() => {
@@ -41,11 +41,6 @@ function Home() {
         }
 
         if (entry.isIntersecting) {
-          if (entry.target.classList.contains('hidden')) {
-            entry.target.classList.remove('hidden');
-            entry.target.classList.add('show');
-            return;
-          }
           if (entry.target.classList.contains('no_highlight')) {
             entry.target.classList.remove('no_highlight');
             entry.target.classList.add('highlighted');
@@ -80,22 +75,32 @@ function Home() {
       });
     }, { threshold: 0.1 });
 
-    // Select all elements to be observed
     const highlightedElements = document.querySelectorAll('.no_highlight');
     const hidden_rotatedElements = document.querySelectorAll('.hidden_rotated');
-    const hiddenElements = document.querySelectorAll('.hidden');
     const noMoveElements = document.querySelectorAll('.not_move');
     const curveCv = document.querySelectorAll('.not_move2');
     const curvetextTop = document.querySelectorAll('.not_move3');
     const curveFooter = document.querySelectorAll('.not_move4');
     const footerContainer = document.querySelectorAll('.footer-pong');
 
-    // Observe each element
-    [...highlightedElements, ...hiddenElements, ...noMoveElements, ...hidden_rotatedElements, ...curveCv, ...curvetextTop, ...curveFooter, ...footerContainer].forEach(element => {
+    [...highlightedElements, ...noMoveElements, ...hidden_rotatedElements, ...curveCv, ...curvetextTop, ...curveFooter, ...footerContainer].forEach(element => {
       observer.observe(element);
     });
 
     return () => observer.disconnect();
+  }, [animationDone]);
+
+  useEffect(() => {
+    const homeWrapper = document.querySelector(".home-wrapper");
+    if (!homeWrapper) return;
+    const checkScroll = () => {
+      const isScrolled =
+        homeWrapper.scrollTop >
+        window.innerHeight - document.querySelector(".navbar")?.clientHeight;
+      setPastPoint(isScrolled);
+    };
+    homeWrapper.addEventListener("scroll", checkScroll);
+    return () => homeWrapper.removeEventListener("scroll", checkScroll);
   }, [animationDone]);
 
   return (
@@ -104,14 +109,16 @@ function Home() {
         !animationDone ? (
           <Animation />
         ) : (
-          <div className='main_page'>
-            <NBodyCanvas />
-            <ScrollReveal />
-            <CV />
-            <OnePicture />
-            <Projects />
-            <MySkills />
-            <ScrollRevealBottom />
+          <div className='home-wrapper'>
+            <div className='main_page'>
+              <NBodyCanvas />
+              <ScrollReveal />
+              <CV />
+              <OnePicture />
+              <Projects />
+              <MySkills />
+              <ScrollRevealBottom />
+            </div>
           </div>
         )
       }

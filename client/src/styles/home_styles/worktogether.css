@@ -1,7 +1,7 @@
 .footer{
     position: relative;
-    background-color: rgb(234, 234, 234);
-    color: white;
+    
+    
     display: flex;
     flex-direction: column;
     text-align: center;

@@ -47,12 +47,18 @@
   z-index: 2;
 }
 
+.iconwrap a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .iconwrap img {
   width: 25px;
   height: 25px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1;
   left: 50%;
   top: 50%;
@@ -63,4 +69,22 @@
   width: 10px;
   height: 10px;
   border-radius: 50px;
+}
+
+
+
+@media (max-width: 410px) {
+  .iconwrap {
+    width: 8vw;
+    height: 8vw;
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  .iconwrap img {
+    width: 6vw;
+    height: 6vw;
+    min-width: 20px;
+    min-height: 20px;
+  }
 }

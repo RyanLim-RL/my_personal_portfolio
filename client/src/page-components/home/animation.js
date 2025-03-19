@@ -14,12 +14,16 @@ const Animation = () => {
     });
 
     const start = () => {
+        const nav = document.querySelector(".navbar");
+        nav.style.pointerEvents = "auto";
         setPlayMusic(true);
         workerRef.current.postMessage({ type: "DONE", data: { dimensions } });
     }
 
     const start_no_music = () => {
         setPlayMusic(false);
+        const nav = document.querySelector(".navbar");
+        nav.style.pointerEvents = "auto";
         workerRef.current.postMessage({ type: "DONE", data: { dimensions } });
     }
 
@@ -90,13 +94,13 @@ const Animation = () => {
                     ctx.beginPath();
                     ctx.globalAlpha = b.alpha;
                     ctx.arc(b.pos.x, b.pos.y, 2.5, 0, Math.PI * 2);
-                    ctx.fillStyle = "rgb(0, 0, 0)";
+                    ctx.fillStyle = "rgb(157, 157, 240)";
                     ctx.fill();
                     ctx.closePath();
 
                 });
                 e.data.ripples.forEach((ripple) => {
-                    ctx.strokeStyle = `rgb(0, 0, 255, ${ripple.opacity})`;
+                    ctx.strokeStyle = `rgb(173, 232, 244, ${ripple.opacity})`;
                     ctx.lineWidth = 2;
                     ctx.beginPath();
                     ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
@@ -124,7 +128,7 @@ const Animation = () => {
 
 
     return (
-        <div id="animation_wrapper">
+        <div className="animation_wrapper">
 
             <canvas
                 className="boid-canvas"
@@ -132,15 +136,18 @@ const Animation = () => {
                 width={dimensions.width}
                 height={dimensions.height}
             ></canvas>
-            <div className="click" onClick={start}>
-                <h1 className="click_to_start">Hi, I'm Ryan Lim.</h1>
-                <div className="music-text">This will enable music</div>
+            
+            <div className="click_wrapper">
                 <div className="circle_explode"></div>
-            </div>
-            <div className="no-sound" onClick={start_no_music}>
-                <TbMusicCancel className="no-sound-icon" />
-                <div className="dropdown">
-                    <p>Start without music?</p>
+                <div className="click" onClick={start}>
+                    <h1 className="click_to_start">Hi, I'm Ryan Lim.</h1>
+                    <div className="music-text">This will enable music</div>
+                </div>
+                <div className="no-sound" onClick={start_no_music}>
+                    <TbMusicCancel className="no-sound-icon" />
+                    <div className="dropdown">
+                        <p>Start without music?</p>
+                    </div>
                 </div>
             </div>
         </div>

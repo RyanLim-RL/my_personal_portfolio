@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNav } from "../../contexts/navcontext";
 import { useLocation } from "react-router-dom";
 import Globe from "./globe";

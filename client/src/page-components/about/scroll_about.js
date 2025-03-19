@@ -7,7 +7,7 @@ import { modules } from './modules';
 
 const ScrollAbout = ({ setBottomUni }) => {
     const [focusedModule, setFocusedModule] = useState(0);
-    const { setAboutNavStyle } = useNav();
+
 
     useEffect(() => {
         const frame = document.querySelector(".frame");
@@ -40,21 +40,6 @@ const ScrollAbout = ({ setBottomUni }) => {
 
         frame.addEventListener("scroll", handleScrollAbout);
         return () => frame.removeEventListener("scroll", handleScrollAbout);
-    }, []);
-
-    useEffect(() => {
-        const frame = document.querySelector(".frame");
-        if (!frame) return;
-        const handleScrollNav = () => {
-            const scrollAbout = document.querySelector(".scroll-about");
-            if (!scrollAbout) return;
-
-            const scrollAboutTop = scrollAbout.getBoundingClientRect().top;
-            setAboutNavStyle(scrollAboutTop < 0 ? "blackAbout" : "lightBlue");
-        };
-
-        frame.addEventListener("scroll", handleScrollNav);
-        return () => frame.removeEventListener("scroll", handleScrollNav);
     }, []);
 
     useEffect(() => {

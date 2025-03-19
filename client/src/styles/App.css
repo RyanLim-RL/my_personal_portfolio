@@ -1,4 +1,14 @@
-#body {
-  background-color: rgb(223, 0, 0);
+/* For Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
 }
 
+/* For Firefox */
+html, body {
+  scrollbar-width: none; /* Hides scrollbar */
+}
+
+/* For IE and Edge (older versions) */
+body {
+  -ms-overflow-style: none;
+}

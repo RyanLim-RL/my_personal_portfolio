@@ -1,32 +1,42 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./navbar";
 import { useNav } from "../../contexts/navcontext";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import "../../styles/layout_styles/layout.css";
+
 
 const Layout = () => {
   const { switching, path, animationDone } = useNav();
-  const layoutRef = useRef(null);
+
 
   useEffect(() => {
-    if (!layoutRef.current) return;
-    if (switching) {
-      layoutRef.current.style.opacity = 0;
-      layoutRef.current.style.transition = "opacity 1.45s ease-in-out";
+    const transition = document.querySelector(".transition");
 
+    if (switching) {     
+      if (path === "/") {
+       transition.style.backgroundColor = "rgb(57, 0, 149)";
+      }else if (path === "/about") {
+        transition.style.backgroundColor = "rgb(247, 178, 59)";
+      }else if (path === "/projects") {
+        transition.style.backgroundColor = "rgb(0,0,0)";
+      }else if (path === "/contact") {
+        transition.style.backgroundColor = "rgb(157, 157, 240)";
+      }
 
+      transition.style.transform = "translateY(100vh)";
     } else {
-      layoutRef.current.style.transition = "opacity 1.45s ease-in-out";
-      layoutRef.current.style.opacity = 1;
-
+      transition.style.transform = "translateY(-100vh)";
     }
   }, [switching]);
 
   return (
     <div className="layout-container">
+      <div className="transition">
+        <div className="transition-inner">YI MING
+        </div>
+      </div>
       <NavBar />
-
-      <div ref={layoutRef} className="layout">
+      <div className="layout">
         <Outlet />
       </div>
     </div>

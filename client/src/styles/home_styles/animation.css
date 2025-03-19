@@ -1,22 +1,35 @@
-.animationWrapper {
+.animation-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
     border: 0;
+    z-index: 0;
 }
 
 .boid-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(16,16,16);
+}
+
+.click_wrapper{
+    position: absolute;
+    top:0;
+    left:0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
+    z-index: 1;
 
-    background-color: rgb(239, 239, 239);
 }
-
 
 .click {
     display: flex;
@@ -30,7 +43,7 @@
     height: calc(max(40vw, 40vh));
     width: calc(max(40vw, 40vh));
     border-radius: 50%;
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(16,16,16);
     animation: scaleIn 1s forwards;
 }
 
@@ -45,14 +58,15 @@
 }
 
 
-
 .click_to_start {
-    font-size: 5vw;
-    color: rgb(0, 0, 0);
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    
     font-weight: 10;
     transition: transform 0.5s;
     text-align: center;
-    margin: 20px;
+    margin: 20px;    
     
 }
 
@@ -63,21 +77,20 @@
 
 
 .circle_explode {
-    will-change: transform;
-    transform: translateZ(0) scale(0);
-    ;
+    transform: scale(0);
     background-color: rgb(23, 0, 61);
     position: absolute;
     opacity: 1;
     width: calc(max(150vw, 150vh));
     height: calc(max(150vw, 150vh));
     border-radius: 50%;
+    z-index: 100;
 }
 
 
 .music-text {
-    font-size: 1.2vw;
-    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     text-align: center;
@@ -95,6 +108,7 @@
     width: 50px;
     height: 50px;
     margin: 20px;
+    z-index: 2;
 }
 
 .no-sound-icon {
@@ -103,7 +117,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .dropdown {
@@ -124,7 +138,7 @@
 
 .dropdown p {
     font-size: 1rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 300;
     transition: color 0.5s;
 }
@@ -154,3 +168,53 @@
         transform: scale(1)
     }
 }
+
+
+@media (max-width: 480px) {
+    .music-text{
+        font-size: 0.8rem;
+      }
+      .click_to_start{
+          font-size: 2.5rem;
+      }
+  }
+  
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .music-text{
+        font-size: 1rem;
+      }
+      .click_to_start{
+          font-size: 3rem;
+      }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .music-text{
+        font-size: 1rem;
+      }
+      .click_to_start{
+          font-size: 3rem;
+      }
+  }
+  
+  
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    .music-text{
+      font-size: 1.2rem;
+    }
+    .click_to_start{
+        font-size: 3.6rem;
+    }
+  }
+  
+  
+  @media (min-width: 1367px) {
+    .music-text{
+        font-size: 1.5rem;
+      }
+      .click_to_start{
+          font-size: 5rem;
+      }
+  }
