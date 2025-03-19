@@ -3,17 +3,17 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
+    min-height: 100dvh;
     overflow: hidden;
     margin: 0;
     background-color: white;
 }
 
 .outline{
-    width: 97.5vw;
-    height: 97.5vh;
+    width: 97.5dvw;
+    height: 97.5dvh;
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -28,9 +28,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
+    min-height: 100dvh;
     overflow: hidden;
     margin: 0;
     z-index: 2;
@@ -41,7 +41,7 @@
 
 
 .two_pictures .right, .two_pictures .left {
-    width: calc(50vw + 0.5px);
+    width: calc(50dvw + 0.5px);
     height: 100%;
     position: relative; 
     display: flex;
@@ -78,7 +78,7 @@
     margin: 0;
     padding: 0;
     align-self: flex-end;
-    font-size: 20vw;
+    font-size: 20dvw;
     font-weight: 100;
     font-family: "Roboto Slab", arial, helvetica, sans-serif;
     background-image: linear-gradient(180deg, rgb(0, 42, 139), rgba(255, 255, 255, 0.158));
@@ -91,7 +91,7 @@
     line-height: 0;
     margin: 0;
     padding: 0;
-    font-size: 2vw;
+    font-size: 2dvw;
     font-weight: 200;
     color: rgba(0, 0, 0, 0.768);
 }
@@ -100,7 +100,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    width: 100vw;
+    width: 100dvw;
     
     flex-direction: column;
     
@@ -122,8 +122,8 @@
 }
 
 .main_picture img{
-    width: calc(max(100vw,100vh));
-    height: calc(max(100vw,100vh));
+    width: calc(max(100dvw,100dvh));
+    height: calc(max(100dvw,100dvh));
     object-fit: cover;
     object-position: center;
     z-index: 2;
@@ -149,7 +149,7 @@
     padding: 0;
     
     text-align: center;
-    font-size: 10vw;
+    font-size: 10dvw;
     width: 100%;
     
     color:rgb(255, 255, 255);
@@ -162,19 +162,19 @@
 
 @media (max-width: 430px){
     .small{
-        font-size:5vw;
+        font-size:5dvw;
     }
     .main_picture_text{
-        font-size: 25vw;
+        font-size: 25dvw;
     }
 }
 @media ((min-width: 431px) and (max-width: 758px)){
     .small{
-        font-size: 4vw;
+        font-size: 4dvw;
 
     }
     .main_picture_text{
-        font-size: 15vw;
+        font-size: 15dvw;
     }
     
 }

@@ -1,13 +1,13 @@
 .contain{
     position:relative;
-    height: 400vh;
+    height: 400dvh;
   }
   
   /* Green box - Absolute */
   .rel {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     z-index: 2;
     top: 0;
   }

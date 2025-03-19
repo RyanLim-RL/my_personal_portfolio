@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     border: 0;
     z-index: 0;
 }
@@ -13,8 +13,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     background-color: rgb(16,16,16);
 }
 
@@ -25,8 +25,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     z-index: 1;
 
 }
@@ -40,8 +40,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: calc(max(40vw, 40vh));
-    width: calc(max(40vw, 40vh));
+    height: calc(max(40dvw, 40dvh));
+    width: calc(max(40dvw, 40dvh));
     border-radius: 50%;
     background-color: rgb(16,16,16);
     animation: scaleIn 1s forwards;
@@ -59,7 +59,7 @@
 
 
 .click_to_start {
-    font-size: calc(min(7vw,7vh));
+    font-size: calc(min(7dvw,7dvh));
     color: rgb(255, 255, 255);
     width: 100%;
     width: 200%;

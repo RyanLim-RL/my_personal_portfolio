@@ -75,15 +75,15 @@
 
 @media (max-width: 410px) {
   .iconwrap {
-    width: 8vw;
-    height: 8vw;
+    width: 8dvw;
+    height: 8dvw;
     min-width: 20px;
     min-height: 20px;
   }
 
   .iconwrap img {
-    width: 6vw;
-    height: 6vw;
+    width: 6dvw;
+    height: 6dvw;
     min-width: 20px;
     min-height: 20px;
   }

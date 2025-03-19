@@ -10,7 +10,7 @@
   
   .leftNav {
     position: absolute;
-    left: 2vw;
+    left: 2dvw;
     top: 50%;
     transform: translateY(-50%);
   
@@ -241,7 +241,7 @@
   
   .rightNav {
     position: absolute;
-    right: 2vw;
+    right: 2dvw;
     top: 50%;
     transform: translateY(-50%);
     display: flex;

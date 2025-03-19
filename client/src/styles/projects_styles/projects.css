@@ -1,7 +1,7 @@
 .projects-page-wrapper {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     overflow-y: auto; 
     overflow-x: hidden;
     scroll-behavior: auto;
@@ -11,7 +11,7 @@
     position: relative;
     background-color: #ee6969;
     width: 100%;
-    height: 1000vh;
+    height: 1000dvh;
 }
 
 .projects-header-stiky{
@@ -20,7 +20,7 @@
     z-index: 1;
     background-color: #ffffff;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -31,7 +31,7 @@
 .projects-header{
     position: relative;
     width: 90%;
-    height: 30vh;
+    height: 30dvh;
     transition: color 0.5s linear;
     
     background-color: transparent;
@@ -84,8 +84,8 @@
 .projects-container {
     position: relative;
     background-color: transparent;
-    height: 70vh;
-    width: 100vw;
+    height: 70dvh;
+    width: 100dvw;
     z-index: 2;
     overflow: hidden;
 }
@@ -135,11 +135,11 @@
         font-size: 6rem;
     }
     .projects-container{
-        height: 50vh;
+        height: 50dvh;
     }
     .projects-header{
         padding-top: 40px;
-        height: 50vh;
+        height: 50dvh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -165,11 +165,11 @@
         font-size: 6rem;
     }
     .projects-container{
-        height: 50vh;
+        height: 50dvh;
     }
     .projects-header{
         padding-top: 40px;
-        height: 50vh;
+        height: 50dvh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -195,11 +195,11 @@
         font-size: 6rem;
     }
     .projects-container{
-        height: 50vh;
+        height: 50dvh;
     }
     .projects-header{
         padding-top: 40px;
-        height: 50vh;
+        height: 50dvh;
         display: flex;
         flex-direction: column;
         justify-content: center;

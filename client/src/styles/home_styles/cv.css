@@ -1,8 +1,8 @@
 /* Centered Section */
 .cv-section {
   position: relative;
-  height: 80vh;
-  width: 100vw;
+  height: 80dvh;
+  width: 100dvw;
   display: flex;
 
   background: #ffffff;
@@ -149,6 +149,6 @@
 
   .cv-btn {
 
-    font-size: 7vw;    
+    font-size: 7dvw;    
   }
 }

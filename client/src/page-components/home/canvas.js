@@ -94,6 +94,8 @@ const NBodyCanvas = () => {
         window.addEventListener("wheel", resetScrollListener, { passive: false, capture: true });
         window.addEventListener("wheel", blockScroll, { passive: false, capture: true }); // Block desktop scroll
         window.addEventListener("touchmove", blockScroll, { passive: false, capture: true }); // Block mobile scroll
+        window.addEventListener("touchmove", scrollHandler, {passive: false, capture: true});
+        window.addEventListener("touchmove", resetScrollListener, {passive:false, capture:true});
         return () => {
             window.removeEventListener("wheel", scrollHandler, { passive: false, capture: true });
             window.removeEventListener("wheel", resetScrollListener, { passive: false, capture: true });
