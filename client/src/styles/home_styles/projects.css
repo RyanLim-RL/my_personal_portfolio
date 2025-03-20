@@ -65,8 +65,7 @@
     background: rgb(248, 139, 103);
     border-radius: 8px;
     transition: background 0.3s ease-in-out;
-    text-decoration: none;
-
+    text-decoration: none !important;
     transition: padding-left 0.5s;
 }
 
@@ -83,11 +82,13 @@
 .project-left h3 {
     font-size: 6rem;
     margin: 0;
+    color: black;
 }
 
 .year {
     font-size: 0.9rem;
     opacity: 0.7;
+
 }
 
 /* Right Side (Details) */
@@ -106,6 +107,7 @@
 .project-right p {
     font-size: 1rem;
     font-weight: bold;
+    color: black;
 }
 
 .svg_projects {

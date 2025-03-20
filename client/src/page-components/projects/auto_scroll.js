@@ -10,7 +10,8 @@ const AutoScroll = () => {
     const autoScroll = () => {
       if (!isUserScrolling) {
         const wrapper = document.querySelector('.projects-page-wrapper');
-        if (wrapper) wrapper.scrollBy(0, 1);
+        if (!wrapper) return
+        wrapper.scrollBy(0, 1);
       }
     };
 

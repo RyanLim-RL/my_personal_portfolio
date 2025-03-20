@@ -51,7 +51,7 @@ const About = () => {
     frame.style.borderTopLeftRadius = "20px";
     frame.style.borderTopRightRadius = "20px";
     if (sTop > 10) {
-      frame.style.width = "100dw";
+      frame.style.width = "100dvw";
       frame.style.height = "100dvh";
       frame.style.borderTopLeftRadius = "0px";
       frame.style.borderTopRightRadius = "0px";
