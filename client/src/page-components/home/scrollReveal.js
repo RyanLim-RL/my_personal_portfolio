@@ -9,7 +9,7 @@ function ScrollReveal() {
       <div className="rel">
         <TextTop />
       </div>
-      <div className="stick" style={{ position: "sticky", top: "0px", height: "100vh", zIndex: 1 }}>
+      <div className="stick" style={{ position: "sticky", top: "0px", height: "100dvh", zIndex: 1 }}>
         <TwoPictures />
       </div>
     </div>

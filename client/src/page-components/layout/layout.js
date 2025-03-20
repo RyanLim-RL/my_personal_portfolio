@@ -23,9 +23,9 @@ const Layout = () => {
         transition.style.backgroundColor = "rgb(157, 157, 240)";
       }
 
-      transition.style.transform = "translateY(100vh)";
+      transition.style.transform = "translateY(100dvh)";
     } else {
-      transition.style.transform = "translateY(-100vh)";
+      transition.style.transform = "translateY(-100dvh)";
     }
   }, [switching]);
 

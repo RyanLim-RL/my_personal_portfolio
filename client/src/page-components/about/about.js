@@ -46,13 +46,13 @@ const About = () => {
   useEffect(() => {
     const frame = document.querySelector(".frame");
     if (!frame) return;
-    frame.style.width = "90vw";
-    frame.style.height = "90vh";
+    frame.style.width = "90dvw";
+    frame.style.height = "90dvh";
     frame.style.borderTopLeftRadius = "20px";
     frame.style.borderTopRightRadius = "20px";
     if (sTop > 10) {
-      frame.style.width = "100vw";
-      frame.style.height = "100vh";
+      frame.style.width = "100dw";
+      frame.style.height = "100dvh";
       frame.style.borderTopLeftRadius = "0px";
       frame.style.borderTopRightRadius = "0px";
     }

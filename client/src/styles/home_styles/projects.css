@@ -1,4 +1,4 @@
-.projects{
+.projects {
     position: relative;
     display: flex;
     background-color: rgb(255, 255, 255);
@@ -7,22 +7,27 @@
     padding: 20px 100px;
     padding-bottom: 200px;
     z-index: 3;
-    
+
 }
-.rotated-title{
+
+.rotated-title {
     position: absolute;
     left: -155px;
     top: 330px;
     transform: rotate(-90deg) translateY(-150px);
-    font-size: 9rem; /* Larger text for better visibility */
-    color: rgb(51, 62, 132); /* Subtle background text */
+    font-size: 9rem;
+    /* Larger text for better visibility */
+    color: rgb(51, 62, 132);
+    /* Subtle background text */
     font-weight: bold;
     white-space: nowrap;
-    pointer-events: none; /* Prevents interaction */
-    z-index: 2; /* Moves behind the project list */
+    pointer-events: none;
+    /* Prevents interaction */
+    z-index: 2;
+    /* Moves behind the project list */
 }
 
-.description{
+.description {
     color: rgba(13, 13, 13, 0.775);
     text-align: left;
     justify-content: left;
@@ -33,7 +38,8 @@
     font-weight: 700;
     font-style: underline;
     font-family: serif;
-    padding: 10px 40px; /* Creates space for rotated title */
+    padding: 10px 40px;
+    /* Creates space for rotated title */
     z-index: 1;
 
 }
@@ -45,7 +51,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 0px 40px; /* Creates space for rotated title */
+    padding: 0px 40px;
+    /* Creates space for rotated title */
     z-index: 1;
 }
 
@@ -70,11 +77,11 @@
     display: flex;
     flex-direction: column;
     padding-left: 100px;
+    text-decoration: none;
 }
 
 .project-left h3 {
     font-size: 6rem;
-    text-decoration: underline;
     margin: 0;
 }
 
@@ -86,6 +93,7 @@
 /* Right Side (Details) */
 .project-right {
     text-align: right;
+    text-decoration: none;
 }
 
 .project-right h4 {
@@ -100,7 +108,7 @@
     font-weight: bold;
 }
 
-.svg_projects{
+.svg_projects {
     position: absolute;
     top: 0;
     left: 0;
@@ -114,66 +122,68 @@
     stroke: #ff6e6e;
     stroke-width: 5;
     stroke-linecap: round;
-    stroke-dasharray: 2400; /* Total length of the path */
-    stroke-dashoffset: 2400; /* Start hidden */
+    stroke-dasharray: 2400;
+    /* Total length of the path */
+    stroke-dashoffset: 2400;
+    /* Start hidden */
 }
-.move_left{
+
+.move_left {
     animation: drawLine 7s ease-in-out forwards 0.5s;
 }
+
 @keyframes drawLine {
     from {
         stroke-dashoffset: 2400;
     }
+
     to {
         stroke-dashoffset: 0;
     }
 }
 
-.hidden_rotated{
+.hidden_rotated {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-10%) rotate(-90deg);
-  }
+}
 
-  .show{
+.show {
     transition: all 2s;
-  }
+}
 
-  .skill:hover{
+.skill:hover {
     transform: scale(1.1);
     transition: transform 0.5s;
-  }
+}
 
-  @media (min-width: 1000px){
-    .project:hover{
+@media (min-width: 1000px) {
+    .project:hover {
         padding-left: 150px;
         transition: padding-left 0.5s;
     }
 }
 
-@media (min-width: 1000px){
-    .project:hover{
-        padding-left: 150px;
-        transition: padding-left 0.5s;
-    }
-}
-@media ((min-width: 769px) and (max-width: 999px)){
-    .project:hover{
+@media ((min-width: 769px) and (max-width: 999px)) {
+    .project:hover {
         padding-left: 50px;
         transition: padding-left 0.5s;
     }
+
     .project-left h3 {
         font-size: 2.5rem;
     }
 }
+
 @media (max-width: 768px) {
     .projects {
         padding: 20px 20px;
     }
+
     .projects-container {
         flex-direction: column;
     }
-    
+
 
     .project {
         flex-direction: column;
@@ -181,8 +191,8 @@
         gap: 10px;
         min-width: 100px;
     }
-    
-    .year{
+
+    .year {
         text-align: right;
     }
 
@@ -198,10 +208,23 @@
 
     .project-left h3 {
         font-size: 2rem;
+        text-align: right;
     }
 
-    .description{
-        font-size: 1.5rem;
+    .project-right p {
+        font-size: 0.5rem;
+    }
+
+    .project-right h4 {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 1rem;
         padding: 10px 20px;
+    }
+
+    .rotated-title {
+        font-size: 8.3rem;
     }
 }

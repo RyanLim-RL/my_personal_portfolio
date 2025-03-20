@@ -48,7 +48,7 @@
 
 .sticky-section-mal {
     position: relative;
-    height: 400vh; /*edit*/
+    height: 400dvh; /*edit*/
     background-color: rgb(253, 253, 253);
     z-index: 22;
 }
@@ -122,8 +122,8 @@
 
 .kdu-section-mal{
     position: absolute;
-    top: 300vh;
-    height: 100vh;
+    top: 300dvh;
+    height: 100dvh;
     width: 100%;
     background-color: #ffffff;
     z-index: 30;

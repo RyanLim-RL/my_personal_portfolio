@@ -81,8 +81,8 @@
     background-color: rgb(23, 0, 61);
     position: absolute;
     opacity: 1;
-    width: calc(max(150vw, 150vh));
-    height: calc(max(150vw, 150vh));
+    width: calc(max(150dvw, 150dvh));
+    height: calc(max(150dvw, 150dvh));
     border-radius: 50%;
     z-index: 100;
 }

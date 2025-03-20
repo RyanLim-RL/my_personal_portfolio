@@ -138,7 +138,7 @@
 
   @media  (max-width: 768px){
     .myskills{
-      height: calc(max(200vh, 200vw));
+      height: calc(max(200dvh, 200dvw));
     }
     .skills-title h1{
       font-size: 5rem;
