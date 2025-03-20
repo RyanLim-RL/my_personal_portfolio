@@ -11,49 +11,51 @@ const Projects = () => {
             <div className="description">I love to create new things and bring them to life.</div>
             <div className="project-list">
                 <div className="rotated-title hidden_rotated">PROJECTS</div>
-                <div className="project">
+                <a href="https://github.com/TomHurford/TeamTeam-BookingApp" className="project">
                     <div className="project-left">
-                        <h3>Formy-AI</h3>
-                        <p className="year">2024</p>
-                    </div>
-                    <div className="project-right">
-                        <h4>UI/UX Design & Development</h4>
-                        <p>Next.js, PostgreSQL, Clerk, Gemini API...</p>
-                    </div>
-                </div>
-
-                <div className="project">
-                    <div className="project-left">
-                        <h3>FileFlex</h3>
-                        <p className="year">2024</p>
-                    </div>
-                    <div className="project-right">
-                        <h4>UI/UX Design & Development</h4>
-                        <p>Next.js, TypeScript, FFmpeg</p>
-                    </div>
-                </div>
-
-                <div className="project">
-                    <div className="project-left">
-                        <h3>Next Dines</h3>
+                        <h3>Ticketopia</h3>
                         <p className="year">2023</p>
                     </div>
                     <div className="project-right">
-                        <h4>UI/UX Design</h4>
-                        <p>Figma, Notion</p>
+                        <h4>Event Booking App</h4>
+                        <p>React, Node, Express, Prisma, Postgres, Git</p>
                     </div>
-                </div>
-
-                <div className="project">
+                </a>
+                
+                <a href="https://github.com/RyanLim-RL/Finance_Tracker" className="project">
                     <div className="project-left">
-                        <h3>Algo-Visualizer</h3>
-                        <p className="year">2023</p>
+                        <h3>Finance Tracker</h3>
+                        <p className="year">2024</p>
                     </div>
                     <div className="project-right">
-                        <h4>Development</h4>
-                        <p>React.js, Git</p>
+                        <h4>Financial Analysis</h4>
+                        <p>Python, Pytorch</p>
                     </div>
-                </div>
+                </a>
+
+           
+
+                <a href="https://github.com/A-Gully/one-of-us" className="project">
+                    <div className="project-left">
+                        <h3>VolleyBall Team App</h3>
+                        <p className="year">2025</p>
+                    </div>
+                    <div className="project-right">
+                        <h4>Team creation and management</h4>
+                        <p>Flutter, Firebase</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/RyanLim-RL/my_personal_portfolio" className="project">
+                    <div className="project-left">
+                        <h3>Personal-Portfolio</h3>
+                        <p className="year">2025</p>
+                    </div>
+                    <div className="project-right">
+                        <h4>Showcase</h4>
+                        <p>React, Express, Node</p>
+                    </div>
+                </a>
             </div>
         </div>
     );

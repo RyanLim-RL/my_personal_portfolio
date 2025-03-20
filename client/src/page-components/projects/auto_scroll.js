@@ -10,7 +10,7 @@ const AutoScroll = () => {
     const autoScroll = () => {
       if (!isUserScrolling) {
         const wrapper = document.querySelector('.projects-page-wrapper');
-        wrapper.scrollBy(0, 1); 
+        if (wrapper) wrapper.scrollBy(0, 1);
       }
     };
 
@@ -29,22 +29,21 @@ const AutoScroll = () => {
       }
     };
 
-    // Start automatic scrolling
+
     const startAutoScroll = () => {
       clearInterval(scrollInterval.current);
       scrollInterval.current = setInterval(autoScroll, 0.01); // Adjust for smoother scrolling
     };
     const wrapper = document.querySelector('.projects-page-wrapper');
+    if (!wrapper) return;
 
-    // Attach event listeners for user interactions
     wrapper.addEventListener("wheel", handleUserScroll);
     wrapper.addEventListener("touchmove", handleUserScroll);
     wrapper.addEventListener("keydown", handleUserScroll);
 
-    startAutoScroll(); // Start auto-scrolling on mount
+    startAutoScroll();
 
     return () => {
-      // Cleanup event listeners and intervals on unmount
       wrapper.removeEventListener("wheel", handleUserScroll);
       wrapper.removeEventListener("touchmove", handleUserScroll);
       wrapper.removeEventListener("keydown", handleUserScroll);
@@ -53,7 +52,7 @@ const AutoScroll = () => {
     };
   }, []);
 
-  return null; // No UI needed, only logic
+  return null;
 };
 
 export default AutoScroll;

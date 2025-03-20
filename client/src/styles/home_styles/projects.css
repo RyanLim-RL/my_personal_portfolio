@@ -55,11 +55,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: rgb(128, 190, 252);
+    background: rgb(248, 139, 103);
     border-radius: 8px;
     transition: background 0.3s ease-in-out;
-    
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+
     transition: padding-left 0.5s;
 }
 
@@ -74,6 +74,7 @@
 
 .project-left h3 {
     font-size: 6rem;
+    text-decoration: underline;
     margin: 0;
 }
 
@@ -88,14 +89,15 @@
 }
 
 .project-right h4 {
-    font-size: 1.2rem;
+    font-family: serif;
+    font-size: 2rem;
     margin: 0;
-    color: #f5f5dc;
+    color: #ffffff;
 }
 
 .project-right p {
-    font-size: 0.9rem;
-    opacity: 0.7;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .svg_projects{

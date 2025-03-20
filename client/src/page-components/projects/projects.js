@@ -36,10 +36,11 @@ const Projects = () => {
     }, [switching]);
 
     useEffect(() => {
+        const projectPageWrapper = document.querySelector('.projects-page-wrapper');
+        const containerRelative = document.querySelector('.projects-container-relative');
+        if(!projectPageWrapper || !containerRelative) return;
+        
         const scrollHandler = () => {
-
-            const projectPageWrapper = document.querySelector('.projects-page-wrapper');
-            const containerRelative = document.querySelector('.projects-container-relative');
             const percentageScrolled = projectPageWrapper.scrollTop /
                 (containerRelative.clientHeight - window.innerHeight);
             if (percentageScrolled < 0.19) {
