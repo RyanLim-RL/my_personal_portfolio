@@ -117,9 +117,6 @@ const Projects = () => {
         const projectHeader = document.querySelector('.projects-header');
         const techProjPage = document.querySelector('.tech-proj-page');
         const desProjPage = document.querySelector('.description-proj-page');
-        if (!switching) {
-            playClick(playMusic);
-        }
         if (projectFocused[1] === 4) {
             stickyHeader.style.backgroundColor = 'rgb(57, 0, 149)';
             projectHeader.style.color = 'white';
