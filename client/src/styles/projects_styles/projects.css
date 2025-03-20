@@ -42,7 +42,7 @@
     text-align: center;
 }
 
-.title-on-proj-page{
+.title-proj-page{
     display: flex;
     font-family: serif;
     font-size: 6rem;
@@ -124,6 +124,8 @@
 @media (max-width: 430px) {
     .title-proj-page{
         font-size: 3rem;
+        width: 100%;
+        border: none !important;
     }
     .description-proj-page{
         font-size: 1rem;
@@ -154,6 +156,8 @@
 @media (min-width: 431px) and (max-width: 867px) {
     .title-proj-page{
         font-size: 3.8rem;
+        width: 100%;
+        border: none !important;
     }
     .description-proj-page{
         font-size: 1rem;
@@ -181,9 +185,11 @@
     }
 }
 
-@media (min-width: 868px) and (max-width: 1200px) {
+@media (min-width: 868px) and (max-width: 1300px) {
     .title-proj-page{
         font-size: 5rem;
+        width: 100%;
+        border: none !important;
     }
     .description-proj-page{
         font-size: 1rem;
