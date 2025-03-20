@@ -1,6 +1,6 @@
 .footer-container{
     position: relative;
-    width: 100vw;
+    width: 100dvw;
     min-height: auto;
     background-color: white;
     display: flex;
@@ -36,7 +36,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    font-size: 90vw;
+    font-size: 90dvw;
     color: rgb(234, 234, 234);
     width: 100%;
     font-family: serif;

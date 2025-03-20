@@ -46,8 +46,10 @@ const Animation = () => {
             e.preventDefault();
         }
         window.addEventListener("wheel", disableScroll, { passive: false, capture: true });
+        window.addEventListener("touchmove", disableScroll,{capture: true, passive: false});
         return () => {
             window.removeEventListener("wheel", disableScroll, { passive: false, capture: true });
+            window.removeEventListener("touchmove", disableScroll, {capture:true, passive:false});
         }
     }, []);
 

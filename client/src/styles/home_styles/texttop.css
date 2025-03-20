@@ -6,8 +6,8 @@
   align-items: center;
   justify-content: center;
   background: white;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   z-index: 5;
   overflow: hidden;
 
@@ -17,7 +17,7 @@
 .about-me-content {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100dvh;
   margin: auto;
   text-align: center;
   align-items: center;
@@ -32,14 +32,14 @@
 
   font-family: serif;
   background-color: rgba(255, 255, 255, 0.538);
-  padding-top: 5vh;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding-top: 5dvh;
+  padding-left: 20dvw;
+  padding-right: 20dvw;
 }
 
 /* Paragraph Styling */
 .about-me-content p {
-  font-size: 2vw;
+  font-size: 2dvh;
   font-weight: 300;
   font-family: sans-serif;
 }
@@ -57,7 +57,7 @@
   gap: 20px;
 
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
-  font-size: 9vw;
+  font-size: 9dvw;
   width: auto;
   font-weight: 500;
 }
@@ -154,7 +154,7 @@
 
 @media (max-width: 430px) {
   .about-me-header {
-    font-size: 12vw;
+    font-size: 12dvw;
   }
   .about-me-content p {
     font-size: 1rem;
@@ -167,7 +167,7 @@
 
 @media ((min-width: 431px) and (max-width: 800px)) {
   .about-me-header {
-    font-size: 10vw;
+    font-size: 10dvw;
   }
   .about-me-content p {
     font-size: 1.2rem;
