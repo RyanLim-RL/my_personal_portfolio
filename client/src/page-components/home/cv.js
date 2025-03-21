@@ -19,7 +19,7 @@ const CV = () => {
                     </a>
 
                     {/* View Online Button */}
-                    <a href="/cv/Ryan_Lim_CV.pdf" className="cv-btn view-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://docs.google.com/document/d/1qiyGkdLTSCAg8v0reRO7VlNLYfAa144QrRaE825w_ro/edit?usp=sharing" className="cv-btn view-btn" target="_blank" rel="noopener noreferrer">
                         <FaExternalLinkAlt className="cv-icon" /> View
                     </a>
                 </div>
