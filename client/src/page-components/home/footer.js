@@ -125,8 +125,11 @@ const Footer = () => {
         const handleTouchStart = (e) => {
             if (!paddleRef.current) return;
     
-            const touchY = e.touches[0].clientY; 
-            const paddleY = paddleRef.current.paddle1Y; 
+            const rect = canvas.getBoundingClientRect(); // Get canvas size and position
+            const touchY = e.touches[0].clientY - rect.top; // Normalize touch Y to canvas
+            const paddleY = paddleRef.current.y;
+            
+            
     
             if (touchY < paddleY) {
                 paddleRef.current.upPressed = true; 
@@ -142,11 +145,10 @@ const Footer = () => {
             paddleRef.current.downPressed = false;
         };
     
-        // Attach touch event listeners
+        
         canvas.addEventListener("touchstart", handleTouchStart);
         canvas.addEventListener("touchend", handleTouchEnd);
     
-        // Cleanup on unmount
         return () => {
             canvas.removeEventListener("touchstart", handleTouchStart);
             canvas.removeEventListener("touchend", handleTouchEnd);
