@@ -125,9 +125,9 @@ const Footer = () => {
         const handleTouchStart = (e) => {
             if (!paddleRef.current) return;
     
-            const rect = canvas.getBoundingClientRect(); // Get canvas size and position
-            const touchY = e.touches[0].clientY - rect.top; // Normalize touch Y to canvas
-            const paddleY = paddleRef.current.y;
+            const rect = canvas.getBoundingClientRect(); 
+            const touchY = e.touches[0].clientY - rect.top;
+            const paddleY = paddleRef.current.paddle1Y;
             
             
     
