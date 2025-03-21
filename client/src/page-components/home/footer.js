@@ -120,6 +120,40 @@ const Footer = () => {
     }, []);
 
     useEffect(() => {
+        const canvas = canvasRef.current;
+    
+        const handleTouchStart = (e) => {
+            if (!paddleRef.current) return;
+    
+            const touchY = e.touches[0].clientY; 
+            const paddleY = paddleRef.current.y; // Paddle's current Y position
+    
+            if (touchY < paddleY) {
+                paddleRef.current.upPressed = true; // Move up
+            } else {
+                paddleRef.current.downPressed = true; // Move down
+            }
+        };
+    
+        const handleTouchEnd = () => {
+            if (!paddleRef.current) return;
+    
+            paddleRef.current.upPressed = false;
+            paddleRef.current.downPressed = false;
+        };
+    
+        // Attach touch event listeners
+        canvas.addEventListener("touchstart", handleTouchStart);
+        canvas.addEventListener("touchend", handleTouchEnd);
+    
+        // Cleanup on unmount
+        return () => {
+            canvas.removeEventListener("touchstart", handleTouchStart);
+            canvas.removeEventListener("touchend", handleTouchEnd);
+        };
+    }, []);
+
+    useEffect(() => {
         if (scorePlayer1 >= 5) {
             setTimeout(() => {
                 setIsGameRunning(false);
