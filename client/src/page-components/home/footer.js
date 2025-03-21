@@ -126,12 +126,12 @@ const Footer = () => {
             if (!paddleRef.current) return;
     
             const touchY = e.touches[0].clientY; 
-            const paddleY = paddleRef.current.y; // Paddle's current Y position
+            const paddleY = paddleRef.current.paddle1Y; 
     
             if (touchY < paddleY) {
-                paddleRef.current.upPressed = true; // Move up
+                paddleRef.current.upPressed = true; 
             } else {
-                paddleRef.current.downPressed = true; // Move down
+                paddleRef.current.downPressed = true; 
             }
         };
     
