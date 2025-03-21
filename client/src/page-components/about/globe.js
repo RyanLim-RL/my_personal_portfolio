@@ -269,7 +269,12 @@ const Globe = ({ sTop, frameSize, bottomUni }) => {
             e.stopPropagation();
         };
         window.addEventListener("wheel", disableScrolling, { passive: false, capture: true });
-        return () => window.removeEventListener("wheel", disableScrolling, { passive: false, capture: true });
+        window.addEventListener("touchmove", disableScrolling, { passive: false, capture: true });
+        
+        return () => {
+            window.removeEventListener("wheel", disableScrolling, { passive: false, capture: true });
+            window.removeEventListener("touchmove", disableScrolling, { passive: false, capture: true });
+        }
     }, [isScrollBlocked]);
 
 

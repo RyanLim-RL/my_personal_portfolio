@@ -6,11 +6,11 @@ import NavBarTiny from "./navbar-tiny";
 
 const NavBar = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-    const { animationDone, nonHome, switching, footer } = useNav();
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768 && window.innerHeight < 1024);
+            setIsMobile(window.innerWidth < 768);
+            console.log(isMobile)
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);

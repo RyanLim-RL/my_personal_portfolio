@@ -120,13 +120,6 @@ const MalaysiaAbout = () => {
     );
 }
 
-/*
-   <div className="education-item">
-              **IGCSEs:** 5 A*s & 4 As (including A*s in Mathematics, Additional
-              Mathematics, and Sciences) <br />
-            </p>
-          </div>
-          */
 
 
 export default MalaysiaAbout;

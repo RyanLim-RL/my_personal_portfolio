@@ -1,10 +1,10 @@
-.section-malaysia{
+.section-malaysia {
     position: relative;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    
+
     flex: 1 0 auto;
     padding: 0;
     z-index: 30;
@@ -12,7 +12,7 @@
 
 
 
-.title-experience-mal{
+.title-experience-mal {
     text-align: right;
     margin-left: 7.5%;
     margin-right: 7.5%;
@@ -24,11 +24,11 @@
     margin-bottom: 0;
 }
 
-.education-item-header-mal{
+.education-item-header-mal {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding-top: 30px;
 }
 
 .education-item-header-mal h2 {
@@ -36,7 +36,7 @@
     color: hsl(228, 89%, 67%);
     text-align: left;
     margin-bottom: 10px;
-    
+
 }
 
 .education-duration-mal {
@@ -48,7 +48,8 @@
 
 .sticky-section-mal {
     position: relative;
-    height: 400dvh; /*edit*/
+    height: 400dvh;
+    /*edit*/
     background-color: rgb(253, 253, 253);
     z-index: 22;
 }
@@ -64,7 +65,7 @@
     margin-top: 20px;
     font-size: 2.5rem;
     display: flex;
-    margin-left: auto; 
+    margin-left: auto;
     width: 80%;
     position: relative;
     color: #000000;
@@ -117,10 +118,10 @@
     width: 80%;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-.kdu-section-mal{
+.kdu-section-mal {
     position: absolute;
     top: 300dvh;
     height: 100dvh;
@@ -130,7 +131,7 @@
     border-top: 2px solid #000000;
 }
 
-.education-item-header-mal-kdu{
+.education-item-header-mal-kdu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,7 +144,7 @@
     color: #95c88d;
     text-align: left;
     margin-bottom: 10px;
-    
+
 }
 
 .education-kdu-mal {
@@ -171,7 +172,142 @@
     margin-left: 15%;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 
+@media (max-width:767px) {
+    .title-experience-mal {
+        font-size: 2rem;
+    }
+
+    .education-item-header-mal h2 {
+        font-size: calc(max(7dvw, 1rem));
+        text-align: right;
+    }
+
+    .education-duration-mal {
+        font-size: 3dvw;
+    }
+
+    .education-mal-details {
+        margin-top: 10px;
+        font-size: calc(max(5dvw, 0.75rem));
+        width: 90%;
+    }
+
+    .ky-img {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .edu-ky-img {
+
+        width: calc(max(55dvw, 200px));
+    }
+
+    .education-alevels-mal {
+        font-size: 1.25rem;
+    }
+
+    .alevels-mal-details {
+        font-size: 1rem;
+    }
+
+    .my-ky-experience {
+        font-size: 1rem;
+    }
+
+    .education-item-header-mal-kdu h2 {
+        font-size: calc(max(7dvw, 1rem));
+    }
+
+    .education-duration-mal {
+        font-size: 3dvw;
+    }
+
+    .education-kdu-mal {
+        margin-top: 10px;
+        font-size: calc(max(5dvw, 0.75rem));
+        width: 90%;
+    }
+
+    .kdu-mal-details {
+        font-size: 1.25rem;
+    }
+
+    .my-kdu-experience {
+        font-size: 1.1rem;
+    }
+
+}
+
+
+@media (min-width:768px) and (max-width:1024px) {
+    .title-experience-mal {
+        font-size: 3rem;
+    }
+
+    .education-item-header-mal h2 {
+        font-size: calc(max(7dvw, 1rem));
+        text-align: right;
+    }
+
+    .education-duration-mal {
+        font-size: 3dvw;
+        text-align: left;
+    }
+
+    .education-mal-details {
+        margin-top: 10px;
+        font-size: calc(max(3.5dvw, 1rem));
+        width: 90%;
+    }
+
+    .ky-img {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .edu-ky-img {
+
+        width: calc(max(50dvw, 200px));
+    }
+
+    .education-alevels-mal {
+        font-size: 2.25rem;
+    }
+
+    .alevels-mal-details {
+        font-size: 1.25rem;
+    }
+
+    .my-ky-experience {
+        margin-top: 100px;
+        font-size: 1.75rem;
+    }
+
+    .education-item-header-mal-kdu h2 {
+        font-size: calc(max(7dvw, 1rem));
+    }
+
+    .education-duration-mal {
+        font-size: 3dvw;
+    }
+
+    .education-kdu-mal {
+        margin-top: 10px;
+        font-size: calc(max(5dvw, 0.75rem));
+        width: 90%;
+    }
+
+    .kdu-mal-details {
+        font-size: 1.5rem;
+    }
+
+    .my-kdu-experience {
+        font-size: 2rem;
+    }
+}
