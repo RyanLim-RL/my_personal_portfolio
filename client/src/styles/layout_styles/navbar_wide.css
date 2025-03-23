@@ -24,6 +24,7 @@
     align-items: center;
     overflow: hidden;
     z-index: -1;
+    cursor: pointer;
   }
   
   .box {
@@ -38,6 +39,7 @@
     align-items: center;
     display: flex;
     transition: background 0.4s ease-in-out, transform 0.3s ease-out;
+    cursor: pointer;
   }
   
   .text_box {
@@ -49,6 +51,7 @@
     height: 50%;
     overflow: hidden;
     padding: 0;
+    cursor: pointer;
     margin: 0;
   }
   
@@ -64,7 +67,8 @@
     margin: 0;
     z-index: 2;
     font-weight: bold;
-    transition: transform 0.4s ease-out
+    transition: transform 0.4s ease-out;
+    cursor: pointer;
   }
   
   
@@ -80,7 +84,8 @@
     margin: 0;
     z-index: 5;
     font-weight: bold;
-    transition: transform 0.4s ease-out
+    transition: transform 0.4s ease-out;
+    cursor: pointer;
   }
   
   
@@ -112,6 +117,7 @@
     gap: 20px;
     z-index: -1;
     overflow: hidden;
+    
   }
   
   .midNav .proj,
@@ -126,6 +132,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    cursor: pointer;
+    
   }
   
   .l_old {
@@ -241,6 +249,7 @@
   
   .rightNav {
     position: absolute;
+    cursor: pointer;
     right: 2dvw;
     top: 50%;
     transform: translateY(-50%);
