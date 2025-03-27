@@ -56,7 +56,7 @@ const CV = () => {
                         const x = i * golRef.current.cellSize;
                         const y = j * golRef.current.cellSize;
                         if (golRef.current.grid[i][j] === 1) {
-                            const hue = 240 + (x / dimensions.width) * 60; 
+                            const hue = (x / dimensions.width) * 40; 
                             ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
                             ctx.fillRect(x, y, golRef.current.cellSize, golRef.current.cellSize);
                         }

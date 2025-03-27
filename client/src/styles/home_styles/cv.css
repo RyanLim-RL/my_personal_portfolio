@@ -135,8 +135,8 @@
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  animation: open 0.4s ease-in-out;
   z-index: 100;
+  transform-origin: right;
 }
 
 .gol {
@@ -193,7 +193,6 @@
   color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
-  font-family: serif;
 }
 
 .restart-animation-gol {
@@ -212,7 +211,7 @@
 
 .inner-title-cv-view {
   font-size: 6dvw;
-  color: rgb(38, 48, 242);
+  color: rgb(0, 0, 0);
   background-color: white;
   border: 2px solid rgb(0, 0, 0);
   padding: 20px;
