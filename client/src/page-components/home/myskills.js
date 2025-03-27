@@ -130,7 +130,6 @@ const MySkills = () => {
       });
     }
   }, [dimensions]);
-  const lerp = (start, end, factor) => start * (1 - factor) + end * factor;
 
 
   useEffect(() => {

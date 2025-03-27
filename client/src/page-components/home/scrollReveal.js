@@ -1,4 +1,3 @@
-import React, { useRef, useEffect } from "react";
 import "../../styles/home_styles/scrollReveal.css";
 import TextTop from "./texttop";
 import TwoPictures from "./picturesslider";

@@ -11,7 +11,7 @@ class Boid {
     update(dt) {
         this.vel = this.vel.add(this.acc.multiply(dt));
         let vel_mag = this.vel.magnitude();
-        if (vel_mag == 0) {
+        if (vel_mag === 0) {
             return;
         }
         this.vel = this.vel.divide(vel_mag);

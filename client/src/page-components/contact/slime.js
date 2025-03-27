@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import Slime_Simulation from "../../utils/slime_simulation/simulation";
 import "../../styles/contact_styles/slime.css";
 
 const Slime = () => {

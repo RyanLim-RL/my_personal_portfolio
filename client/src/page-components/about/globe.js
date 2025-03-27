@@ -389,7 +389,6 @@ const Globe = ({ sTop, frameSize, bottomUni }) => {
         const screenHeight = frameSize;
 
         const screenWidth = window.innerWidth;
-        const xScaleFactor = screenWidth / 1920;
         const yScaleFactor = screenHeight / 1080;
         const zScaleFactor = (screenWidth + screenHeight) / 3000;
         const kualaLumpurRotation = { xRotation: -Math.PI / 20, yRotation: Math.PI / 1.0525 };
@@ -517,7 +516,6 @@ const Globe = ({ sTop, frameSize, bottomUni }) => {
         const bottomUniPos = bottomUni;
         const screenWidth = window.innerWidth;
         const screenHeight = frameSize;
-        const xScaleFactor = screenWidth / 1920;
         const yScaleFactor = screenHeight / 1080;
         const zScaleFactor = (screenWidth + screenHeight) / 3000;
         const kualaLumpurRotation = { xRotation: -Math.PI / 20, yRotation: Math.PI / 1.0525 };

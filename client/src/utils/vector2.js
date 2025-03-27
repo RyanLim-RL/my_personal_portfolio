@@ -14,7 +14,7 @@ class Vector2 {
     }
     divide(scalar) {
         if (scalar === 0) {
-            throw "divide by 0 error"
+            throw new Error("Cannot divide by zero")
         }
         return new Vector2(this.x / scalar, this.y / scalar)
     }

@@ -55,14 +55,14 @@ class Simulation {
         let totalMass = 0.0;
         for (let i = 0; i < this.bodies.length; i++) {
             totalMass += this.bodies[i].mass;
-            if (this.bodies[i].mass == 0) {
+            if (this.bodies[i].mass === 0) {
                 continue;
             }
 
             const v = Math.sqrt(totalMass / (this.bodies[i].pos.magnitude()));
             this.bodies[i].vel = (this.bodies[i].vel.multiply(v));
         }
-        this.bodies = this.bodies.filter((b) => b.mass != this.M);
+        this.bodies = this.bodies.filter((b) => b.mass !== this.M);
     }
 
     update(mousePosition) {
@@ -73,7 +73,7 @@ class Simulation {
             this.bodies.push(new Body(new Vector2(mousePosition.x, mousePosition.y), new Vector2(0, 0), 3000, true));
         }
         for (let i = 0; i < this.bodies.length; i++) {
-            if (this.bodies[i].mass == this.M) {
+            if (this.bodies[i].mass === this.M) {
                 continue;
             }
             this.bodies[i].update(this.dt);

@@ -9,7 +9,7 @@ import ScrollRevealBottom from './scrollRevealBottom';
 
 import '../../styles/home_styles/home.css';
 import { useNav } from '../../contexts/navcontext';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 

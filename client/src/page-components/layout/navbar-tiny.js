@@ -70,7 +70,6 @@ const NavBarTiny = () => {
             };
             const applyStyle = () => {
                 const theme = styles[style];
-                console.log(style)
                 Object.keys(elementsToToggle).forEach((category) => {
                     elementsToToggle[category].forEach((selector) => {
                         document.querySelectorAll(selector).forEach((el) => {

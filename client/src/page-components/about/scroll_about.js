@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { useNav } from '../../contexts/navcontext';
 import '../../styles/about_styles/scroll_about.css';
 import { modules } from './modules';
 

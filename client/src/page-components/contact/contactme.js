@@ -8,7 +8,7 @@ import "../../styles/contact_styles/contact.css";
 
 const Contact = () => {
 
-  const { setNonHome, setSwitching, switching, path, setPath } = useNav();
+  const { setNonHome, setSwitching, switching, path } = useNav();
   const location = useLocation();
   useEffect(() => {
     let timeoutID

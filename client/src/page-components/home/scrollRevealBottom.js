@@ -1,4 +1,3 @@
-import react from 'react';
 import WorkTogether from './worktogether';
 import Footer from './footer';
 import '../../styles/home_styles/scrollrevealbottom.css';

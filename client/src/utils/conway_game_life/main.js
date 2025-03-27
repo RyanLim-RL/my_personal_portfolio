@@ -44,9 +44,9 @@ class Conway_Game_Of_Life{
             for (let j = 0; j < this.rows; j++) {
                 let state = this.grid[i][j];
                 let neighbors = this.countNeighbors(i, j);
-                if (state == 0 && neighbors == 3) {
+                if (state === 0 && neighbors === 3) {
                     this.next[i][j] = 1;
-                } else if (state == 1 && (neighbors < 2 || neighbors > 3)) {
+                } else if (state === 1 && (neighbors < 2 || neighbors > 3)) {
                     this.next[i][j] = 0;
                 } else {
                     this.next[i][j] = state;

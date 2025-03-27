@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/layout_styles/navbar_wide.css";
 
 import { useNavigate } from "react-router-dom";

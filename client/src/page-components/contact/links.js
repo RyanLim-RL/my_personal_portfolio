@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "../../styles/contact_styles/links.css";
 const FindMe = () => {
     const email = "ryanlim.ryml@gmail.com";

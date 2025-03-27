@@ -1,13 +1,28 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./navbar";
 import { useNav } from "../../contexts/navcontext";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "../../styles/layout_styles/layout.css";
 
 
 const Layout = () => {
   const { switching, path, animationDone } = useNav();
 
+  useEffect(() => {
+    const handleLoad = () => {
+        console.log('All page assets have loaded.');
+    };
+
+    if (document.readyState === 'complete') {
+        handleLoad();
+    } else {
+        window.addEventListener('load', handleLoad);
+    }
+
+    return () => {
+        window.removeEventListener('load', handleLoad);
+    };
+}, [path, animationDone]);
 
   useEffect(() => {
     const transition = document.querySelector(".transition");

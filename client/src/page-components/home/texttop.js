@@ -4,7 +4,7 @@ import { useNav } from "../../contexts/navcontext";
 import "../../styles/home_styles/texttop.css";
 
 const TextTop = () => {
-    const { switching, setSwitching, setPath } = useNav();
+    const { switching, setSwitching } = useNav();
     const navigate = useNavigate();
 
     const handleClick = (path) => {

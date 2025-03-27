@@ -1,19 +1,18 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { useNav } from "../../contexts/navcontext";
 import '../../styles/projects_styles/projects.css';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { projects } from './projects_data';
-import { playClick } from '../click';
 import AutoScroll from './auto_scroll';
 
 const Projects = () => {
-    const { setNonHome, setSwitching, switching, path, playMusic } = useNav();
+    const { setNonHome, setSwitching, switching, path } = useNav();
     const location = useLocation();
     const [projectFocused, setProjectFocused] = useState([0, 0]);
-    const navigate = useNavigate();
     const lastFocusedIndex = useRef(null);
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768); // Adjust breakpoint as needed
+    
+    
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,8 +37,8 @@ const Projects = () => {
     useEffect(() => {
         const projectPageWrapper = document.querySelector('.projects-page-wrapper');
         const containerRelative = document.querySelector('.projects-container-relative');
-        if(!projectPageWrapper || !containerRelative) return;
-        
+        if (!projectPageWrapper || !containerRelative) return;
+
         const scrollHandler = () => {
             const percentageScrolled = projectPageWrapper.scrollTop /
                 (containerRelative.clientHeight - window.innerHeight);

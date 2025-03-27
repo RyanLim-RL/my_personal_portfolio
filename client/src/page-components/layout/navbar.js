@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/layout_styles/navbar.css";
-import { useNav } from "../../contexts/navcontext";
 import NavBarWide from "./navbar-wide";
 import NavBarTiny from "./navbar-tiny";
 
@@ -10,7 +9,6 @@ const NavBar = () => {
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
-            console.log(isMobile)
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);

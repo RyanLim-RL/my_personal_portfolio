@@ -115,7 +115,7 @@ class Quadtree {
             let children = this.subdivide(node);
             let quad1 = this.nodes[node].quad.find_quadrant(p);
             let quad2 = this.nodes[node].quad.find_quadrant(pos);
-            if (quad1 == quad2) {
+            if (quad1 === quad2) {
                 node = children + quad1;
             } else {
                 let n1 = children + quad1;
@@ -149,7 +149,7 @@ class Quadtree {
             if (n.is_leaf() || n.quad.size * n.quad.size < this.theta_sq * distance_squared) {
                 let denom = (distance_squared + this.epsilon_sq) * Math.sqrt(distance_squared);
                 acc = acc.add(distance.multiply(Math.min(n.mass / denom, Number.POSITIVE_INFINITY)));
-                if (n.next == 0) {
+                if (n.next === 0) {
                     break;
                 }
 

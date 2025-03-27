@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from 'react';
 import '../../styles/home_styles/projects.css';
 
 const Projects = () => {
