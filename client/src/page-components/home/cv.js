@@ -1,6 +1,6 @@
 import { FaDownload, FaExternalLinkAlt } from "react-icons/fa";
-import { RiArrowGoBackLine } from "react-icons/ri";
-import { MdLoop } from "react-icons/md";
+import { RiArrowGoBackLine,RiLoopLeftFill } from "react-icons/ri";
+
 
 
 import { useEffect, useState, useRef } from "react";
@@ -47,8 +47,10 @@ const CV = () => {
             const ctx = canvas.getContext("2d");
             ctx.clearRect(0, 0, dimensions.width, dimensions.height);
             golRef.current = new Conway_Game_Of_Life(dimensions.width, dimensions.height, 6);
+            let opacity = 0;
 
             const animate = () => {
+                opacity += 0.03;
                 golRef.current.update();
                 ctx.clearRect(0, 0, dimensions.width, dimensions.height);
                 for (let i = 0; i < golRef.current.cols; i++) {
@@ -57,7 +59,8 @@ const CV = () => {
                         const y = j * golRef.current.cellSize;
                         if (golRef.current.grid[i][j] === 1) {
                             const hue = (x / dimensions.width) * 40; 
-                            ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+                            opacity = Math.min(1, opacity);
+                            ctx.fillStyle = `hsl(${hue}, 100%, 50%,${opacity})`;
                             ctx.fillRect(x, y, golRef.current.cellSize, golRef.current.cellSize);
                         }
                     }
@@ -119,13 +122,13 @@ const CV = () => {
                         <div className="cv-view-content">
                             <div className="cv-view-content-inner">
                                 <h2 className="inner-title-cv-view">Specialised CVs</h2>
-                                <a href="https://docs.google.com/document/d/1IBlGguXoJ8crMSabVpjZ9I8vvK77iaRmjorCiPkVvoQ/edit?usp=sharing" className="view_link" target="_blank" >Software Engineer</a>
-                                <a href="https://docs.google.com/document/d/1qiyGkdLTSCAg8v0reRO7VlNLYfAa144QrRaE825w_ro/edit?usp=sharing" className="view_link" target="_blank" >Artificial Intelligence</a>
+                                <a href="https://docs.google.com/document/d/1IBlGguXoJ8crMSabVpjZ9I8vvK77iaRmjorCiPkVvoQ/edit?usp=sharing" className="view_link" target="_blank"  rel="noreferrer" >Software Engineer</a>
+                                <a href="https://docs.google.com/document/d/1qiyGkdLTSCAg8v0reRO7VlNLYfAa144QrRaE825w_ro/edit?usp=sharing" className="view_link" target="_blank" rel="noreferrer" >Artificial Intelligence</a>
                                 <div className="cv-close" onClick={handleClickView}>
-                                    <RiArrowGoBackLine />
+                                    <RiArrowGoBackLine className="cv-icon-view"/>
                                 </div>
                                 <div className="restart-animation-gol" onClick={restartClick}>
-                                    <MdLoop />
+                                    <RiLoopLeftFill className="cv-icon-view"/>
                                 </div>
                             </div>
                         </div>

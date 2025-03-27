@@ -129,14 +129,16 @@
   top: 0;
   width: 100dvw;
   height: 100dvh;
-  background-color: rgb(96, 96, 96);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
   z-index: 100;
-  transform-origin: right;
+  transform-origin: bottom;
+  animation: open 0.5s ease-in-out forwards;
+  
 }
 
 .gol {
@@ -170,7 +172,8 @@
   position: absolute;
   bottom: 2%;
   left: 2%;
-  font-size: 2rem;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   color: rgb(255, 255, 255);
   display: flex;
@@ -186,7 +189,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: 50%;
   height: 10%;
   border-radius: 20px;
@@ -199,14 +202,20 @@
   position: absolute;
   bottom: 2%;
   right: 2%;
-  font-size: 3rem;
+  width: 48px;
+  height: 48px;
   display: flex;
   justify-content: center;
   cursor: pointer;
   align-items: center;
   border-radius: 50%;
   color: white;
+  padding: 10px;
   background-color: black;
+}
+
+.cv-icon-view{
+  font-size: 2rem;
 }
 
 .inner-title-cv-view {
@@ -222,12 +231,12 @@
 @keyframes open {
   from {
     transform: scale(0);
-    border-radius: 400px;
+    
   }
 
   to {
     transform: scale(1);
-    border-radius: 0px;
+    
   }
 }
 
