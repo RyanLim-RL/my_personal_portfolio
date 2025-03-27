@@ -70,6 +70,7 @@ const CV = () => {
         }
         return () => {
             if (animationRef.current) cancelAnimationFrame(animationRef.current);
+            if (timeoutRef.current) clearTimeout(timeoutRef.current); 
         }
     }, [cvOpen, dimensions]);
 
