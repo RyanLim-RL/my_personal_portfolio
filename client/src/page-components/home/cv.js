@@ -119,7 +119,7 @@ const CV = () => {
                         <div className="cv-view-content">
                             <div className="cv-view-content-inner">
                                 <h2 className="inner-title-cv-view">Specialised CVs</h2>
-                                <a href="https://docs.google.com/document/d/1PMcZ3r1bwH47J6Ge44_RTx4sBfUcu_dJL7E2w2l5Trs/edit?usp=sharing" className="view_link" target="_blank" >Software Engineer</a>
+                                <a href="https://docs.google.com/document/d/1IBlGguXoJ8crMSabVpjZ9I8vvK77iaRmjorCiPkVvoQ/edit?usp=sharing" className="view_link" target="_blank" >Software Engineer</a>
                                 <a href="https://docs.google.com/document/d/1qiyGkdLTSCAg8v0reRO7VlNLYfAa144QrRaE825w_ro/edit?usp=sharing" className="view_link" target="_blank" >Artificial Intelligence</a>
                                 <div className="cv-close" onClick={handleClickView}>
                                     <RiArrowGoBackLine />
