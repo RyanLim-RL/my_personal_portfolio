@@ -24,7 +24,13 @@ const CV = () => {
         setCVView(prev => !prev);
     };
     const restartClick = () => {
+        const loopIcon = document.querySelector(".loop-icon-cv");
+        if (loopIcon.classList.contains("loop-icon-cv-rotate")) return;
+        loopIcon.classList.add("loop-icon-cv-rotate");
         golRef.current.init();
+        setTimeout(() => {
+            loopIcon.classList.remove("loop-icon-cv-rotate");
+        }, 500);
     }
 
     useEffect(() => {
@@ -121,14 +127,14 @@ const CV = () => {
                         </canvas>
                         <div className="cv-view-content">
                             <div className="cv-view-content-inner">
-                                <h2 className="inner-title-cv-view">Specialised CVs</h2>
-                                <a href="https://docs.google.com/document/d/1IBlGguXoJ8crMSabVpjZ9I8vvK77iaRmjorCiPkVvoQ/edit?usp=sharing" className="view_link" target="_blank"  rel="noreferrer" >Software Engineer</a>
-                                <a href="https://docs.google.com/document/d/1qiyGkdLTSCAg8v0reRO7VlNLYfAa144QrRaE825w_ro/edit?usp=sharing" className="view_link" target="_blank" rel="noreferrer" >Artificial Intelligence</a>
+                                <div className="container-title-cv"><h2 className="inner-title-cv-view">Specialised CVs</h2></div>
+                                <a href="https://docs.google.com/document/d/1IBlGguXoJ8crMSabVpjZ9I8vvK77iaRmjorCiPkVvoQ/edit?usp=sharing" className="view_link se-link-cv" target="_blank"  rel="noreferrer" >Software Engineer</a>
+                                <a href="https://docs.google.com/document/d/1qiyGkdLTSCAg8v0reRO7VlNLYfAa144QrRaE825w_ro/edit?usp=sharing" className="view_link ai-link-cv" target="_blank" rel="noreferrer" >Artificial Intelligence</a>
                                 <div className="cv-close" onClick={handleClickView}>
                                     <RiArrowGoBackLine className="cv-icon-view"/>
                                 </div>
                                 <div className="restart-animation-gol" onClick={restartClick}>
-                                    <RiLoopLeftFill className="cv-icon-view"/>
+                                    <RiLoopLeftFill className="cv-icon-view loop-icon-cv"/>
                                 </div>
                             </div>
                         </div>

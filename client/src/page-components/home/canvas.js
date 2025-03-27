@@ -142,6 +142,18 @@ const NBodyCanvas = () => {
         };
     }, [dimensions]);
 
+    useEffect(() => {
+        const scrollInidatorHandler = () => {
+            const scrollIndicator = document.querySelector(".scroll-down-indicator");
+            const homeWrapper = document.querySelector(".home-wrapper");
+            if (!scrollIndicator || !homeWrapper) return;
+            scrollIndicator.style.bottom = `-${homeWrapper.scrollTop / 3}px`;
+        };
+        const homeWrapper = document.querySelector(".home-wrapper");
+        homeWrapper.addEventListener("scroll", scrollInidatorHandler);
+        return () => homeWrapper.removeEventListener("scroll", scrollInidatorHandler);
+    }, []);
+
     return (
         <div className="section-top">
             <div className="section-top-wrapper">
@@ -157,6 +169,7 @@ const NBodyCanvas = () => {
                     <p className="line3">Maths & Physics Enthusiast ✮</p>
                 </div>
                 <FindMe />
+                <div className="scroll-down-indicator">Scroll Down</div>
             </div>
         </div>
     );

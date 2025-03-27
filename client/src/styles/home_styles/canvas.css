@@ -6,7 +6,7 @@
     width: 100%;
     z-index: 20;
     height: 100dvh;
-    
+
 }
 
 .nbody-canvas {
@@ -91,6 +91,29 @@
     font-weight: 500;
 }
 
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 0%; 
+    left: 3.25%;
+    transform-origin: left bottom;
+    width: 12.5%;
+    font-size: 1rem;
+    border-top: 1px solid rgb(122, 122, 122);
+    margin: 0;
+    text-align: right;
+    color: white;
+    animation: moveUp 1s ease-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(1200%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translateY(0%) rotate(-90deg);
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -112,6 +135,40 @@
 
     .line3 {
         font-size: 1rem;
+    }
+
+    .scroll-down-indicator {
+        font-size: 0.8rem;
+        width: 15%;
+        display: none;
+    }
+
+}
+
+@media (max-width: 1177px) and (min-width: 769px) {
+    .title {
+        font-size: 3dvh;
+    }
+
+    .line0 {
+        font-size: 1.5dvh;
+    }
+
+    .line1 {
+        font-size: 0.8rem;
+    }
+
+    .line2 {
+        font-size: 2.5rem;
+    }
+
+    .line3 {
+        font-size: 0.8rem;
+    }
+
+    .scroll-down-indicator {
+        font-size: 0.8rem;
+        width: 15%;
     }
 
 }
