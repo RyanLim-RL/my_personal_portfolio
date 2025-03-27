@@ -46,6 +46,10 @@
     background: rgb(52, 52, 52);
   }
   
+  .box-colored-lightpurple{
+    background: rgb(168, 128, 233);
+  }
+  
   
   
   .text-black {
@@ -66,4 +70,8 @@
 
   .line-colored-orange{
     background: rgb(253, 200, 94) !important;
+  }
+
+  .line-colored-lightpurple{
+    background: rgb(168, 128, 233) !important;
   }

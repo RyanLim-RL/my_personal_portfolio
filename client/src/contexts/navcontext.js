@@ -13,6 +13,7 @@ export const NavProvider = ({ children }) => {
   const [path, setPath] = useState("");
   const [footer, setFooter] = useState(false);
   const [pastPoint, setPastPoint] = useState(false);
+  const [cvView, setCVView] = useState(false);
 
 
   useEffect(() => {
@@ -29,7 +30,8 @@ export const NavProvider = ({ children }) => {
       switching, setSwitching,
       path, setPath,
       footer, setFooter,
-      pastPoint, setPastPoint
+      pastPoint, setPastPoint,
+      cvView, setCVView
     }}>
       {children}
     </NavContext.Provider>

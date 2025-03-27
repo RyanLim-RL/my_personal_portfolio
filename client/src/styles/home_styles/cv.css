@@ -25,11 +25,11 @@
   z-index: 1;
 }
 
-.container-cv h2 span {
+.cv-section-title span {
   transition: all 0.5s ease-in-out;
 }
 
-.container-cv h2:hover span {
+.cv-section-title:hover span {
   transition: all 0.5s ease-in-out;
   background-image: linear-gradient(90deg, #32cb74, #09ad66);
   background-clip: text;
@@ -48,7 +48,7 @@
 
 
 /* Heading */
-.cv-section h2 {
+.cv-section-title {
   font-size: 5rem;
   margin: 0;
   padding: 0;
@@ -124,6 +124,114 @@
   animation: drawLine2 5s ease-in-out forwards;
 }
 
+.cv-view {
+  position: fixed !important;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgb(96, 96, 96);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  animation: open 0.4s ease-in-out;
+  z-index: 100;
+}
+
+.gol {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  image-rendering: pixelated;
+}
+
+.cv-view-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cv-view-content-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-close {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+}
+
+.view_link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 50%;
+  height: 10%;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-family: serif;
+}
+
+.restart-animation-gol {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
+
+.inner-title-cv-view {
+  font-size: 6dvw;
+  color: rgb(38, 48, 242);
+  background-color: white;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 20px;
+  margin: 0;
+  border-radius: 20px;
+}
+
+@keyframes open {
+  from {
+    transform: scale(0);
+    border-radius: 400px;
+  }
+
+  to {
+    transform: scale(1);
+    border-radius: 0px;
+  }
+}
+
 @keyframes drawLine2 {
   from {
     stroke-dashoffset: 2400;
@@ -134,21 +242,50 @@
   }
 }
 
-@media (max-width: 600px){
-  .cv-section h2 {
+@media (max-width: 600px) {
+  .cv-section-title {
     font-size: 3rem;
   }
-  
+
+  .view_link {
+    font-size: 1rem;
+  }
+
   /* Paragraph */
   .cv-section p {
     font-size: 0.9rem;
   }
-  .container-cv h2:hover span {
+
+  .cv-section-title:hover span {
     font-size: 3.5rem;
   }
 
   .cv-btn {
 
-    font-size: 7dvw;    
+    font-size: 7dvw;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .cv-section-title {
+    font-size: 3rem;
+  }
+
+  .view_link {
+    font-size: 1.5rem;
+  }
+
+  /* Paragraph */
+  .cv-section p {
+    font-size: 0.9rem;
+  }
+
+  .cv-section-title:hover span {
+    font-size: 3.5rem;
+  }
+
+  .cv-btn {
+
+    font-size: 7dvw;
   }
 }

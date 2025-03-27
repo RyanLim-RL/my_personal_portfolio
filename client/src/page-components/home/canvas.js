@@ -31,11 +31,6 @@ const NBodyCanvas = () => {
     }, []);
 
     useEffect(() => {
-        console.log(dimensions);
-    },[]);
-
-
-    useEffect(() => {
         const homeWrapper = document.querySelector(".home-wrapper");
         if (!homeWrapper) return;
 
@@ -157,7 +152,7 @@ const NBodyCanvas = () => {
                     height={dimensions.height}
                 ></canvas>
                 <div className="title">
-                    <p className="line1">CS Graduate Specialized in AI</p>
+                    <p className="line1">CS Graduate Specialised in AI</p>
                     <p className="line2">SOFTWARE DEVELOPER</p>
                     <p className="line3">Maths & Physics Enthusiast ✮</p>
                 </div>

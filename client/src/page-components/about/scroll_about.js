@@ -194,7 +194,7 @@ const ScrollAbout = ({ setBottomUni }) => {
                                 <div className="module-title-key-color">
                                     <p>
                                         <span className='level-4-key'>Level 4</span> - Foundation | <span className='level-5-key'>Level 5</span> - Intermediate
-                                        | <span className='level-6-key'>Level 6</span> - Specialization | <span className='level-7-key'>Level 7</span> - Masters*
+                                        | <span className='level-6-key'>Level 6</span> - Specialisation | <span className='level-7-key'>Level 7</span> - Masters*
                                     </p>
                                 </div>
                             </div>

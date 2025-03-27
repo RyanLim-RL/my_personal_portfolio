@@ -110,6 +110,12 @@ const Player = ({ style }) => {
           ? process.env.PUBLIC_URL + "/music/piano_white.svg"
           : process.env.PUBLIC_URL + "/music/piano_white.svg"
       );
+    } else if (style === "lightpurple") {
+      setImageSrc(
+        isPlaying
+          ? process.env.PUBLIC_URL + "/music/piano_black.svg"
+          : process.env.PUBLIC_URL + "/music/piano_black.svg"
+      );
     }
   }, [isPlaying, style]);
 

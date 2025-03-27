@@ -6,7 +6,7 @@ import Player from "./player";
 
 const NavBarTiny = () => {
     const navigate = useNavigate();
-    const { animationDone, nonHome, switching, setSwitching, path, footer, pastPoint } = useNav();
+    const { animationDone, nonHome, switching, setSwitching, path, footer, pastPoint, cvView } = useNav();
     const [style, setStyle] = useState("transparent");
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -27,12 +27,13 @@ const NavBarTiny = () => {
         }, [animationDone, nonHome, switching, footer]);
 
     useEffect(() => {
-        if (path === "/" && pastPoint) setStyle("whitePurple");
+        if (path === "/" && cvView) setStyle("lightpurple");
+        else if (path === "/" && pastPoint) setStyle("whitePurple");
         else if (path === "/") setStyle("transparent");
         else if (path === "/about") setStyle("orange");
         else if (path === "/contact") setStyle("black");
         else if (path === "/projects") setStyle("black");
-    }, [path, pastPoint]);
+    }, [path, pastPoint, cvView]);
 
      useEffect(() => {
             const elementsToToggle = {
@@ -60,6 +61,11 @@ const NavBarTiny = () => {
                     backgrounds: "background_transparent",
                     lines: "line-colored-white",
                     boxes: "box-colored-white",
+                },
+                lightpurple: {
+                    backgrounds: "background_white",
+                    lines: "line-colored-lightpurple",
+                    boxes: "box-colored-lightpurple",
                 },
             };
             const applyStyle = () => {
