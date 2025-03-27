@@ -127,7 +127,7 @@ const CV = () => {
                         </canvas>
                         <div className="cv-view-content">
                             <div className="cv-view-content-inner">
-                                <div className="container-title-cv"><h2 className="inner-title-cv-view">Specialised CVs</h2></div>
+                                <div className="container-title-cv"><h2 className="inner-title-cv-view">Curriculum Vitae</h2></div>
                                 <a href="https://docs.google.com/document/d/1IBlGguXoJ8crMSabVpjZ9I8vvK77iaRmjorCiPkVvoQ/edit?usp=sharing" className="view_link se-link-cv" target="_blank"  rel="noreferrer" >Software Engineer</a>
                                 <a href="https://docs.google.com/document/d/1qiyGkdLTSCAg8v0reRO7VlNLYfAa144QrRaE825w_ro/edit?usp=sharing" className="view_link ai-link-cv" target="_blank" rel="noreferrer" >Artificial Intelligence</a>
                                 <div className="cv-close" onClick={handleClickView}>
