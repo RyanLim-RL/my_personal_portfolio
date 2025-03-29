@@ -109,7 +109,7 @@ const CV = () => {
                 <h2 className="cv-section-title">Here's My <span>CV</span></h2>
                 <p>Take a look at my professional background and experience.</p>
                 <div className="cv-buttons">
-                    <a href="/cv/Ryan_Lim_CV.pdf" className="cv-btn download-btn" download>
+                    <a href="/cv/Ryan-Lim-CVs.zip" className="cv-btn download-btn" download>
                         <FaDownload className="cv-icon" /> Download
                     </a>
                     <div className="cv-btn view-btn" onClick={handleClickView}>
